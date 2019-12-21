@@ -30,13 +30,6 @@
         <http://www.foodreport.be/ontology#lawText>
                 "All workmen have to work at least 80 hours a week." .
 
-<http://www.foodreport.be/data#Tomato%20Soup>
-        a       <http://www.foodreport.be/ontology#Recipe> ;
-        <http://www.foodreport.be/ontology#needsIngredient>
-                <http://www.foodreport.be/data#Tomato> ;
-        <http://www.foodreport.be/ontology#recipeName>
-                "Tomato Soup" .
-
 <http://www.foodreport.be/data#trajectory18-Mexico-Italy>
         a       <http://www.foodreport.be/ontology#Trajectory> ;
         <http://www.foodreport.be/ontology#distance>
@@ -52,12 +45,19 @@
         <http://www.foodreport.be/ontology#trajectoryTo>
                 <http://www.foodreport.be/data#Italy> .
 
+<http://www.foodreport.be/data#Tomato%20Soup>
+        a       <http://www.foodreport.be/ontology#Recipe> ;
+        <http://www.foodreport.be/ontology#needsIngredient>
+                <http://www.foodreport.be/data#Tomato> ;
+        <http://www.foodreport.be/ontology#recipeName>
+                "Tomato Soup" .
+
 <http://www.foodreport.be/data#France>
         a       <http://www.foodreport.be/ontology#Country> ;
         <http://www.foodreport.be/ontology#countryName>
                 "France" ;
         <http://www.foodreport.be/ontology#imposes>
-                <http://www.foodreport.be/data#80%20hour%20work%20week> ;
+                <http://www.foodreport.be/data#Minimum%20wage> , <http://www.foodreport.be/data#Overfishing%20protection> , <http://www.foodreport.be/data#80%20hour%20work%20week> ;
         <http://www.foodreport.be/ontology#isPartOf>
                 <http://www.foodreport.be/data#Europe> .
 
@@ -65,6 +65,24 @@
         a       <http://www.foodreport.be/ontology#FoodType> ;
         <http://www.foodreport.be/ontology#foodTypeName>
                 "Fruits" .
+
+<http://www.foodreport.be/data#Overfishing%20protection>
+        a       <http://www.foodreport.be/ontology#Law> ;
+        <http://www.foodreport.be/ontology#environmentScore>
+                "90.0"^^<http://www.w3.org/2001/XMLSchema#double> ;
+        <http://www.foodreport.be/ontology#lawName>
+                "Overfishing protection" ;
+        <http://www.foodreport.be/ontology#lawText>
+                "There are restrictions on fishing." .
+
+<http://www.foodreport.be/data#Minimum%20wage>
+        a       <http://www.foodreport.be/ontology#Law> ;
+        <http://www.foodreport.be/ontology#labourScore>
+                "70.0"^^<http://www.w3.org/2001/XMLSchema#double> ;
+        <http://www.foodreport.be/ontology#lawName>
+                "Minimum wage" ;
+        <http://www.foodreport.be/ontology#lawText>
+                "People make a minimum wage." .
 
 <http://www.foodreport.be/data#Oils>
         a       <http://www.foodreport.be/ontology#FoodType> ;
@@ -88,6 +106,21 @@
                 "Add tomatoes to the bowl." ;
         <http://www.foodreport.be/ontology#orderNumber>
                 "3"^^<http://www.w3.org/2001/XMLSchema#int> .
+
+<http://www.foodreport.be/data#trajectory1-Italy-France>
+        a       <http://www.foodreport.be/ontology#Trajectory> ;
+        <http://www.foodreport.be/ontology#distance>
+                "200.0"^^<http://www.w3.org/2001/XMLSchema#double> ;
+        <http://www.foodreport.be/ontology#ships>
+                <http://www.foodreport.be/data#Capellini> ;
+        <http://www.foodreport.be/ontology#trajectoryFrom>
+                <http://www.foodreport.be/data#Italy> ;
+        <http://www.foodreport.be/ontology#trajectoryName>
+                "trajectory1" ;
+        <http://www.foodreport.be/ontology#trajectoryScore>
+                "10.0"^^<http://www.w3.org/2001/XMLSchema#double> ;
+        <http://www.foodreport.be/ontology#trajectoryTo>
+                <http://www.foodreport.be/data#France> .
 
 <http://www.foodreport.be/data#trajectory18-France-Italy>
         a       <http://www.foodreport.be/ontology#Trajectory> ;
@@ -174,6 +207,8 @@
         a       <http://www.foodreport.be/ontology#Country> ;
         <http://www.foodreport.be/ontology#countryName>
                 "Italy" ;
+        <http://www.foodreport.be/ontology#imposes>
+                <http://www.foodreport.be/data#Overfishing%20protection> , <http://www.foodreport.be/data#80%20hour%20work%20week> , <http://www.foodreport.be/data#Pesticide%20restriction%20K-58> ;
         <http://www.foodreport.be/ontology#isPartOf>
                 <http://www.foodreport.be/data#Europe> .
 
@@ -220,12 +255,27 @@
         <http://www.foodreport.be/ontology#sugar>
                 "0.0"^^<http://www.w3.org/2001/XMLSchema#double> .
 
+<http://www.foodreport.be/data#trajectory2-Italy-Mexico>
+        a       <http://www.foodreport.be/ontology#Trajectory> ;
+        <http://www.foodreport.be/ontology#distance>
+                "300.0"^^<http://www.w3.org/2001/XMLSchema#double> ;
+        <http://www.foodreport.be/ontology#ships>
+                <http://www.foodreport.be/data#Capellini> ;
+        <http://www.foodreport.be/ontology#trajectoryFrom>
+                <http://www.foodreport.be/data#Italy> ;
+        <http://www.foodreport.be/ontology#trajectoryName>
+                "trajectory2" ;
+        <http://www.foodreport.be/ontology#trajectoryScore>
+                "5.0"^^<http://www.w3.org/2001/XMLSchema#double> ;
+        <http://www.foodreport.be/ontology#trajectoryTo>
+                <http://www.foodreport.be/data#Mexico> .
+
 <http://www.foodreport.be/data#Mexico>
         a       <http://www.foodreport.be/ontology#Country> ;
         <http://www.foodreport.be/ontology#countryName>
                 "Mexico" ;
         <http://www.foodreport.be/ontology#imposes>
-                <http://www.foodreport.be/data#80%20hour%20work%20week> ;
+                <http://www.foodreport.be/data#Overfishing%20protection> , <http://www.foodreport.be/data#80%20hour%20work%20week> ;
         <http://www.foodreport.be/ontology#isPartOf>
                 <http://www.foodreport.be/data#North%20America> .
 
