@@ -17,7 +17,7 @@
 13. Open the Fuseki data folder (/etc/fuseki/) again.
 14. Go to the ”configuration” directory (/etc/fuseki/configuration/).
 15. Inside this directory, you should see a ”foodreport.ttl” configuration file. Open this file with an editor.
-16. Replace the code in that file with the code in the file on GitHub _configurationt.ttl_ Note that you have to replace the paths with the correct paths on your computer. The paths need to be routed to the _foodreport-database.db_ and the _foodreport-mapping.ttl_ files that can be found in our repository (database/...).
+16. Replace the code in that file with the code in the file on GitHub _configuration.ttl_ in the root directory. Note that you have to replace the paths with the correct paths on your computer. The paths need to be routed to the _foodreport-database.db_ and the _foodreport-mapping.ttl_ files that can be found in our repository (database/...).
 17. Restart the Jetty server and check if there are any errors.
 18. Try to see if everything works with a query.
 
