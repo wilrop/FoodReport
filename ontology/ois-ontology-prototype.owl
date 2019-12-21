@@ -1,0 +1,1534 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/ontology/foodreport"
+     xml:base="http://www.semanticweb.org/ontology/foodreport"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+     xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
+     xmlns:foodreport="http://www.semanticweb.org/ontology/foodreport#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/ontology/foodreport"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/ontology/foodreport#appliesToFoodType -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontology/foodreport#appliesToFoodType">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontology/foodreport#Law"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontology/foodreport#FoodType"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontology/foodreport#describesRecipe -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontology/foodreport#describesRecipe">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontology/foodreport#Step"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontology/foodreport#Recipe"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontology/foodreport#equalContinent -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontology/foodreport#equalContinent">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontology/foodreport#Continent"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontology/foodreport#Continent"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontology/foodreport#equalCountry -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontology/foodreport#equalCountry">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontology/foodreport#Country"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontology/foodreport#Country"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontology/foodreport#equalFoodType -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontology/foodreport#equalFoodType">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontology/foodreport#FoodType"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontology/foodreport#FoodType"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontology/foodreport#equalIngredient -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontology/foodreport#equalIngredient">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontology/foodreport#Ingredient"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontology/foodreport#Ingredient"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontology/foodreport#equalLaw -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontology/foodreport#equalLaw">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontology/foodreport#Law"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontology/foodreport#Law"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontology/foodreport#equalRecipe -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontology/foodreport#equalRecipe">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontology/foodreport#Recipe"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontology/foodreport#Recipe"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontology/foodreport#equalStep -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontology/foodreport#equalStep">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontology/foodreport#Step"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontology/foodreport#Step"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontology/foodreport#equalTrajectory -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontology/foodreport#equalTrajectory">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontology/foodreport#Trajectory"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontology/foodreport#Trajectory"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontology/foodreport#hasFoodType -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontology/foodreport#hasFoodType">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontology/foodreport#Ingredient"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontology/foodreport#FoodType"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontology/foodreport#imposes -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontology/foodreport#imposes">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontology/foodreport#Country"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontology/foodreport#Law"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontology/foodreport#isPartOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontology/foodreport#isPartOf">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontology/foodreport#Country"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontology/foodreport#Continent"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontology/foodreport#manufactoredFrom -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontology/foodreport#manufactoredFrom">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontology/foodreport#Ingredient"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontology/foodreport#Country"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontology/foodreport#needsIngredient -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontology/foodreport#needsIngredient">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontology/foodreport#Recipe"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontology/foodreport#Ingredient"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontology/foodreport#partOfSameContinent -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontology/foodreport#partOfSameContinent">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontology/foodreport#Country"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontology/foodreport#Country"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontology/foodreport#ships -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontology/foodreport#ships">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontology/foodreport#Trajectory"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontology/foodreport#Ingredient"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontology/foodreport#trajectoryFrom -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontology/foodreport#trajectoryFrom">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontology/foodreport#Trajectory"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontology/foodreport#Country"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontology/foodreport#trajectoryTo -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontology/foodreport#trajectoryTo">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontology/foodreport#Trajectory"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontology/foodreport#Country"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontology/foodreport/alternativeTrajectory -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontology/foodreport/alternativeTrajectory">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontology/foodreport#Trajectory"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontology/foodreport#Trajectory"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontology/foodreport/appliesToIngredient -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontology/foodreport/appliesToIngredient">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontology/foodreport#Law"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontology/foodreport#Ingredient"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/ontology/foodreport#calcium -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontology/foodreport#calcium">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontology/foodreport#Ingredient"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+        <rdfs:label xml:lang="en">Calcium</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontology/foodreport#calories -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontology/foodreport#calories">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontology/foodreport#Ingredient"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+        <rdfs:label xml:lang="en">Calories</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontology/foodreport#carbohydrates -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontology/foodreport#carbohydrates">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontology/foodreport#Ingredient"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+        <rdfs:label xml:lang="en">Carbohydrates</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontology/foodreport#continentName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontology/foodreport#continentName">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontology/foodreport#Continent"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">ContinentName</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontology/foodreport#countryName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontology/foodreport#countryName">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontology/foodreport#Country"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">CountryName</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontology/foodreport#description -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontology/foodreport#description">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontology/foodreport#Step"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">Description</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontology/foodreport#distance -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontology/foodreport#distance">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontology/foodreport#Trajectory"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+        <rdfs:label xml:lang="en">Distance</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontology/foodreport#environmentScore -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontology/foodreport#environmentScore">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontology/foodreport#Law"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+        <rdfs:label xml:lang="en">EnvironmentScore</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontology/foodreport#fat -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontology/foodreport#fat">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontology/foodreport#Ingredient"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+        <rdfs:label xml:lang="en">Fat</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontology/foodreport#foodTypeName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontology/foodreport#foodTypeName">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontology/foodreport#FoodType"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">FoodTypeName</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontology/foodreport#ingredientName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontology/foodreport#ingredientName">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontology/foodreport#Ingredient"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">IngredientName</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontology/foodreport#labourScore -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontology/foodreport#labourScore">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontology/foodreport#Law"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+        <rdfs:label xml:lang="en">LabourScore</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontology/foodreport#lawName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontology/foodreport#lawName">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontology/foodreport#Law"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">LawName</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontology/foodreport#orderNumber -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontology/foodreport#orderNumber">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontology/foodreport#Step"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+        <rdfs:label xml:lang="en">OrderNumber</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontology/foodreport#proteins -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontology/foodreport#proteins">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontology/foodreport#Ingredient"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+        <rdfs:label xml:lang="en">Proteins</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontology/foodreport#recipeName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontology/foodreport#recipeName">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontology/foodreport#Recipe"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">RecipeName</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontology/foodreport#sodium -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontology/foodreport#sodium">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontology/foodreport#Ingredient"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+        <rdfs:label xml:lang="en">Sodium</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontology/foodreport#sugar -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontology/foodreport#sugar">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontology/foodreport#Ingredient"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+        <rdfs:label xml:lang="en">Sugar</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontology/foodreport#text -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontology/foodreport#text">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontology/foodreport#Law"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">Text</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontology/foodreport#trajectoryName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontology/foodreport#trajectoryName">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontology/foodreport#Trajectory"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">TrajectoryName</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontology/foodreport#trajectoryScore -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontology/foodreport#trajectoryScore">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontology/foodreport#Trajectory"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+        <rdfs:label xml:lang="en">TrajectoryScore</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/ontology/foodreport#Continent -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontology/foodreport#Continent">
+        <rdfs:label xml:lang="en">Continent</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontology/foodreport#Country -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontology/foodreport#Country">
+        <rdfs:label xml:lang="en">Country</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontology/foodreport#FoodType -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontology/foodreport#FoodType">
+        <rdfs:label xml:lang="en">FoodType</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontology/foodreport#Ingredient -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontology/foodreport#Ingredient">
+        <rdfs:label xml:lang="en">Ingredient</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontology/foodreport#Law -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontology/foodreport#Law">
+        <rdfs:label xml:lang="en">Law</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontology/foodreport#Recipe -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontology/foodreport#Recipe">
+        <rdfs:label xml:lang="en">Recipe</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontology/foodreport#Step -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontology/foodreport#Step">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontology/foodreport#Recipe"/>
+        <rdfs:label xml:lang="en">Step</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontology/foodreport#Trajectory -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontology/foodreport#Trajectory">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontology/foodreport#Country"/>
+        <rdfs:label xml:lang="en">Trajectory</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/ontology/foodreport#tomatosoup -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontology/foodreport#tomatosoup">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontology/foodreport#Recipe"/>
+        <foodreport:needsIngredient rdf:resource="http://www.semanticweb.org/ontology/foodreport/tomato"/>
+        <foodreport:recipeName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tomato soup</foodreport:recipeName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontology/foodreport#tomatosoup-1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontology/foodreport#tomatosoup-1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontology/foodreport#Step"/>
+        <foodreport:describesRecipe rdf:resource="http://www.semanticweb.org/ontology/foodreport#tomatosoup"/>
+        <foodreport:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cut 5 tomatoes in small pieces.</foodreport:description>
+        <foodreport:orderNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</foodreport:orderNumber>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontology/foodreport#tomatosoup-2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontology/foodreport#tomatosoup-2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontology/foodreport#Step"/>
+        <foodreport:describesRecipe rdf:resource="http://www.semanticweb.org/ontology/foodreport#tomatosoup"/>
+        <foodreport:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fill a pot with (hot) water and bowl it to about 100 degrees celcius.</foodreport:description>
+        <foodreport:orderNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#int">2</foodreport:orderNumber>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontology/foodreport#tomatosoup-3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontology/foodreport#tomatosoup-3">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontology/foodreport#Step"/>
+        <foodreport:describesRecipe rdf:resource="http://www.semanticweb.org/ontology/foodreport#tomatosoup"/>
+        <foodreport:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Add tomatoes to the bowl.</foodreport:description>
+        <foodreport:orderNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#int">3</foodreport:orderNumber>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontology/foodreport/capellini -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontology/foodreport/capellini">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontology/foodreport#Ingredient"/>
+        <foodreport:hasFoodType rdf:resource="http://www.semanticweb.org/ontology/foodreport/pastas"/>
+        <foodreport:calcium rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.0</foodreport:calcium>
+        <foodreport:calories rdf:datatype="http://www.w3.org/2001/XMLSchema#float">375.0</foodreport:calories>
+        <foodreport:carbohydrates rdf:datatype="http://www.w3.org/2001/XMLSchema#float">78.6</foodreport:carbohydrates>
+        <foodreport:fat rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.8</foodreport:fat>
+        <foodreport:ingredientName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Capellini</foodreport:ingredientName>
+        <foodreport:proteins rdf:datatype="http://www.w3.org/2001/XMLSchema#float">12.5</foodreport:proteins>
+        <foodreport:sodium rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.0</foodreport:sodium>
+        <foodreport:sugar rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.8</foodreport:sugar>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontology/foodreport/europe -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontology/foodreport/europe">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontology/foodreport#Continent"/>
+        <foodreport:continentName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Europe</foodreport:continentName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontology/foodreport/france -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontology/foodreport/france">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontology/foodreport#Country"/>
+        <foodreport:imposes rdf:resource="http://www.semanticweb.org/ontology/foodreport/80hourweek"/>
+        <foodreport:isPartOf rdf:resource="http://www.semanticweb.org/ontology/foodreport/europe"/>
+        <foodreport:countryName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">France</foodreport:countryName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontology/foodreport/fruits -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontology/foodreport/fruits">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontology/foodreport#FoodType"/>
+        <foodreport:foodTypeName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fuits</foodreport:foodTypeName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontology/foodreport/italy -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontology/foodreport/italy">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontology/foodreport#Country"/>
+        <foodreport:isPartOf rdf:resource="http://www.semanticweb.org/ontology/foodreport/europe"/>
+        <foodreport:countryName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Italy</foodreport:countryName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontology/foodreport/mexico -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontology/foodreport/mexico">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontology/foodreport#Country"/>
+        <foodreport:imposes rdf:resource="http://www.semanticweb.org/ontology/foodreport/pesticiderestrictionk58"/>
+        <foodreport:imposes rdf:resource="http://www.semanticweb.org/ontology/foodreport/80hourweek"/>
+        <foodreport:isPartOf rdf:resource="http://www.semanticweb.org/ontology/foodreport/northamerica"/>
+        <foodreport:countryName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mexico</foodreport:countryName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontology/foodreport/northamerica -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontology/foodreport/northamerica">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontology/foodreport#Continent"/>
+        <foodreport:continentName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">North America</foodreport:continentName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontology/foodreport/oils -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontology/foodreport/oils">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontology/foodreport#FoodType"/>
+        <foodreport:foodTypeName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Oils</foodreport:foodTypeName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontology/foodreport/oliveoil -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontology/foodreport/oliveoil">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontology/foodreport#Ingredient"/>
+        <foodreport:hasFoodType rdf:resource="http://www.semanticweb.org/ontology/foodreport/oils"/>
+        <foodreport:manufactoredFrom rdf:resource="http://www.semanticweb.org/ontology/foodreport/italy"/>
+        <foodreport:calcium rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</foodreport:calcium>
+        <foodreport:calories rdf:datatype="http://www.w3.org/2001/XMLSchema#float">884.0</foodreport:calories>
+        <foodreport:carbohydrates rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.0</foodreport:carbohydrates>
+        <foodreport:fat rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.0</foodreport:fat>
+        <foodreport:fat rdf:datatype="http://www.w3.org/2001/XMLSchema#float">100.0</foodreport:fat>
+        <foodreport:fat rdf:datatype="http://www.w3.org/2001/XMLSchema#float">2.0</foodreport:fat>
+        <foodreport:ingredientName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Olive Oil</foodreport:ingredientName>
+        <foodreport:sugar rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.0</foodreport:sugar>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontology/foodreport/pastas -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontology/foodreport/pastas">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontology/foodreport#FoodType"/>
+        <foodreport:foodTypeName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pastas</foodreport:foodTypeName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontology/foodreport/pesticiderestrictionk58 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontology/foodreport/pesticiderestrictionk58">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontology/foodreport#Law"/>
+        <foodreport:appliesToFoodType rdf:resource="http://www.semanticweb.org/ontology/foodreport/fruits"/>
+        <foodreport:environmentScore rdf:datatype="http://www.w3.org/2001/XMLSchema#float">85.0</foodreport:environmentScore>
+        <foodreport:lawName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pesticide restriction K-58</foodreport:lawName>
+        <foodreport:text rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pesticides with dangerous chemicals are not allowed.</foodreport:text>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontology/foodreport/spaghettibolognese -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontology/foodreport/spaghettibolognese">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontology/foodreport#Recipe"/>
+        <foodreport:needsIngredient rdf:resource="http://www.semanticweb.org/ontology/foodreport/capellini"/>
+        <foodreport:needsIngredient rdf:resource="http://www.semanticweb.org/ontology/foodreport/oliveoil"/>
+        <foodreport:needsIngredient rdf:resource="http://www.semanticweb.org/ontology/foodreport/tomato"/>
+        <foodreport:recipeName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Spaghetti bolognese</foodreport:recipeName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontology/foodreport/spaghettibolognese-1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontology/foodreport/spaghettibolognese-1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontology/foodreport#Step"/>
+        <foodreport:describesRecipe rdf:resource="http://www.semanticweb.org/ontology/foodreport/spaghettibolognese"/>
+        <foodreport:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Put a large saucepan on a medium heat and add 1 tbsp olive oil.</foodreport:description>
+        <foodreport:orderNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</foodreport:orderNumber>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontology/foodreport/spaghettibolognese-2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontology/foodreport/spaghettibolognese-2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontology/foodreport#Step"/>
+        <foodreport:describesRecipe rdf:resource="http://www.semanticweb.org/ontology/foodreport/spaghettibolognese"/>
+        <foodreport:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Add 4 finely chopped bacon rashers and fry for 10 mins until golden and crisp.</foodreport:description>
+        <foodreport:orderNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#int">2</foodreport:orderNumber>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontology/foodreport/tomato -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontology/foodreport/tomato">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontology/foodreport#Ingredient"/>
+        <foodreport:hasFoodType rdf:resource="http://www.semanticweb.org/ontology/foodreport/fruits"/>
+        <foodreport:manufactoredFrom rdf:resource="http://www.semanticweb.org/ontology/foodreport/france"/>
+        <foodreport:manufactoredFrom rdf:resource="http://www.semanticweb.org/ontology/foodreport/mexico"/>
+        <foodreport:calcium rdf:datatype="http://www.w3.org/2001/XMLSchema#float">18.0</foodreport:calcium>
+        <foodreport:calories rdf:datatype="http://www.w3.org/2001/XMLSchema#float">32.0</foodreport:calories>
+        <foodreport:carbohydrates rdf:datatype="http://www.w3.org/2001/XMLSchema#float">5.8</foodreport:carbohydrates>
+        <foodreport:fat rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.3</foodreport:fat>
+        <foodreport:ingredientName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tomato</foodreport:ingredientName>
+        <foodreport:proteins rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.3</foodreport:proteins>
+        <foodreport:sodium rdf:datatype="http://www.w3.org/2001/XMLSchema#float">7.5</foodreport:sodium>
+        <foodreport:sugar rdf:datatype="http://www.w3.org/2001/XMLSchema#float">3.9</foodreport:sugar>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontology/foodreport/trajectory18-france-italy -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontology/foodreport/trajectory18-france-italy">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontology/foodreport#Trajectory"/>
+        <foodreport:ships rdf:resource="http://www.semanticweb.org/ontology/foodreport/tomato"/>
+        <foodreport:trajectoryFrom rdf:resource="http://www.semanticweb.org/ontology/foodreport/france"/>
+        <foodreport:trajectoryTo rdf:resource="http://www.semanticweb.org/ontology/foodreport/italy"/>
+        <foodreport:distance rdf:datatype="http://www.w3.org/2001/XMLSchema#float">580.0</foodreport:distance>
+        <foodreport:trajectoryName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">trajectory18</foodreport:trajectoryName>
+        <foodreport:trajectoryScore rdf:datatype="http://www.w3.org/2001/XMLSchema#float">42.0</foodreport:trajectoryScore>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontology/foodreport/trajectory18-mexico-italy -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontology/foodreport/trajectory18-mexico-italy">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontology/foodreport#Trajectory"/>
+        <foodreport:ships rdf:resource="http://www.semanticweb.org/ontology/foodreport/tomato"/>
+        <foodreport:trajectoryFrom rdf:resource="http://www.semanticweb.org/ontology/foodreport/mexico"/>
+        <foodreport:trajectoryTo rdf:resource="http://www.semanticweb.org/ontology/foodreport/italy"/>
+        <foodreport:distance rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1997.0</foodreport:distance>
+        <foodreport:trajectoryName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">trajectory18</foodreport:trajectoryName>
+        <foodreport:trajectoryScore rdf:datatype="http://www.w3.org/2001/XMLSchema#float">30.0</foodreport:trajectoryScore>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontology/foodreport/80hourweek -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontology/foodreport/80hourweek">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontology/foodreport#Law"/>
+        <foodreport:appliesToFoodType rdf:resource="http://www.semanticweb.org/ontology/foodreport/fruits"/>
+        <foodreport:appliesToFoodType rdf:resource="http://www.semanticweb.org/ontology/foodreport/oils"/>
+        <foodreport:appliesToFoodType rdf:resource="http://www.semanticweb.org/ontology/foodreport/pastas"/>
+        <foodreport:labourScore rdf:datatype="http://www.w3.org/2001/XMLSchema#float">12.0</foodreport:labourScore>
+        <foodreport:lawName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">80 hours week</foodreport:lawName>
+        <foodreport:text rdf:datatype="http://www.w3.org/2001/XMLSchema#string">All workmen have to work at least 80 hours a week.</foodreport:text>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Rules
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="urn:swrl:var#l">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:swrl:var#t">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:swrl:var#c">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:swrl:var#i">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:swrl:var#s2">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:swrl:var#n">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:swrl:var#s1">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:swrl:var#r">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:swrl:var#p1">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:swrl:var#p2">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:swrl:var#t1">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:swrl:var#cf">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:swrl:var#ct">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:swrl:var#t2">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:swrl:var#f">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:swrl:var#c1">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:swrl:var#c2">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:swrl:var#i1">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:swrl:var#i2">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:swrl:var#l1">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:swrl:var#l2">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:swrl:var#r1">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:swrl:var#r2">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/ontology/foodreport#appliesToFoodType"/>
+                        <swrl:argument1 rdf:resource="urn:swrl:var#l"/>
+                        <swrl:argument2 rdf:resource="urn:swrl:var#t"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/ontology/foodreport#imposes"/>
+                                <swrl:argument1 rdf:resource="urn:swrl:var#c"/>
+                                <swrl:argument2 rdf:resource="urn:swrl:var#l"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/ontology/foodreport#hasFoodType"/>
+                                        <swrl:argument1 rdf:resource="urn:swrl:var#i"/>
+                                        <swrl:argument2 rdf:resource="urn:swrl:var#t"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                        <rdf:first>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/ontology/foodreport#manufactoredFrom"/>
+                                                <swrl:argument1 rdf:resource="urn:swrl:var#i"/>
+                                                <swrl:argument2 rdf:resource="urn:swrl:var#c"/>
+                                            </rdf:Description>
+                                        </rdf:first>
+                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/ontology/foodreport/appliesToIngredient"/>
+                        <swrl:argument1 rdf:resource="urn:swrl:var#l"/>
+                        <swrl:argument2 rdf:resource="urn:swrl:var#i"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/ontology/foodreport#orderNumber"/>
+                        <swrl:argument1 rdf:resource="urn:swrl:var#s2"/>
+                        <swrl:argument2 rdf:resource="urn:swrl:var#n"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/ontology/foodreport#orderNumber"/>
+                                <swrl:argument1 rdf:resource="urn:swrl:var#s1"/>
+                                <swrl:argument2 rdf:resource="urn:swrl:var#n"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/ontology/foodreport#describesRecipe"/>
+                                        <swrl:argument1 rdf:resource="urn:swrl:var#s2"/>
+                                        <swrl:argument2 rdf:resource="urn:swrl:var#r"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                        <rdf:first>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/ontology/foodreport#describesRecipe"/>
+                                                <swrl:argument1 rdf:resource="urn:swrl:var#s1"/>
+                                                <swrl:argument2 rdf:resource="urn:swrl:var#r"/>
+                                            </rdf:Description>
+                                        </rdf:first>
+                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/ontology/foodreport#equalStep"/>
+                        <swrl:argument1 rdf:resource="urn:swrl:var#s1"/>
+                        <swrl:argument2 rdf:resource="urn:swrl:var#s2"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/ontology/foodreport#isPartOf"/>
+                        <swrl:argument1 rdf:resource="urn:swrl:var#p1"/>
+                        <swrl:argument2 rdf:resource="urn:swrl:var#c"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/ontology/foodreport#isPartOf"/>
+                                <swrl:argument1 rdf:resource="urn:swrl:var#p2"/>
+                                <swrl:argument2 rdf:resource="urn:swrl:var#c"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/ontology/foodreport#partOfSameContinent"/>
+                        <swrl:argument1 rdf:resource="urn:swrl:var#p1"/>
+                        <swrl:argument2 rdf:resource="urn:swrl:var#p2"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/ontology/foodreport#trajectoryFrom"/>
+                        <swrl:argument1 rdf:resource="urn:swrl:var#t1"/>
+                        <swrl:argument2 rdf:resource="urn:swrl:var#cf"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/ontology/foodreport#trajectoryTo"/>
+                                <swrl:argument1 rdf:resource="urn:swrl:var#t1"/>
+                                <swrl:argument2 rdf:resource="urn:swrl:var#ct"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/ontology/foodreport#ships"/>
+                                        <swrl:argument1 rdf:resource="urn:swrl:var#t1"/>
+                                        <swrl:argument2 rdf:resource="urn:swrl:var#i"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                        <rdf:first>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/ontology/foodreport#trajectoryFrom"/>
+                                                <swrl:argument1 rdf:resource="urn:swrl:var#t2"/>
+                                                <swrl:argument2 rdf:resource="urn:swrl:var#cf"/>
+                                            </rdf:Description>
+                                        </rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                <rdf:first>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/ontology/foodreport#trajectoryTo"/>
+                                                        <swrl:argument1 rdf:resource="urn:swrl:var#t2"/>
+                                                        <swrl:argument2 rdf:resource="urn:swrl:var#ct"/>
+                                                    </rdf:Description>
+                                                </rdf:first>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                        <rdf:first>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/ontology/foodreport#ships"/>
+                                                                <swrl:argument1 rdf:resource="urn:swrl:var#t2"/>
+                                                                <swrl:argument2 rdf:resource="urn:swrl:var#i"/>
+                                                            </rdf:Description>
+                                                        </rdf:first>
+                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/ontology/foodreport/alternativeTrajectory"/>
+                        <swrl:argument1 rdf:resource="urn:swrl:var#t1"/>
+                        <swrl:argument2 rdf:resource="urn:swrl:var#t2"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/ontology/foodreport#trajectoryName"/>
+                        <swrl:argument1 rdf:resource="urn:swrl:var#t1"/>
+                        <swrl:argument2 rdf:resource="urn:swrl:var#n"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/ontology/foodreport#trajectoryName"/>
+                                <swrl:argument1 rdf:resource="urn:swrl:var#t2"/>
+                                <swrl:argument2 rdf:resource="urn:swrl:var#n"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/ontology/foodreport#trajectoryFrom"/>
+                                        <swrl:argument1 rdf:resource="urn:swrl:var#t1"/>
+                                        <swrl:argument2 rdf:resource="urn:swrl:var#f"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                        <rdf:first>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/ontology/foodreport#trajectoryFrom"/>
+                                                <swrl:argument1 rdf:resource="urn:swrl:var#t2"/>
+                                                <swrl:argument2 rdf:resource="urn:swrl:var#f"/>
+                                            </rdf:Description>
+                                        </rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                <rdf:first>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/ontology/foodreport#trajectoryTo"/>
+                                                        <swrl:argument1 rdf:resource="urn:swrl:var#t1"/>
+                                                        <swrl:argument2 rdf:resource="urn:swrl:var#t"/>
+                                                    </rdf:Description>
+                                                </rdf:first>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                        <rdf:first>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/ontology/foodreport#trajectoryTo"/>
+                                                                <swrl:argument1 rdf:resource="urn:swrl:var#t2"/>
+                                                                <swrl:argument2 rdf:resource="urn:swrl:var#t"/>
+                                                            </rdf:Description>
+                                                        </rdf:first>
+                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/ontology/foodreport#equalTrajectory"/>
+                        <swrl:argument1 rdf:resource="urn:swrl:var#t1"/>
+                        <swrl:argument2 rdf:resource="urn:swrl:var#t2"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/ontology/foodreport#continentName"/>
+                        <swrl:argument1 rdf:resource="urn:swrl:var#c1"/>
+                        <swrl:argument2 rdf:resource="urn:swrl:var#n"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/ontology/foodreport#continentName"/>
+                                <swrl:argument1 rdf:resource="urn:swrl:var#c2"/>
+                                <swrl:argument2 rdf:resource="urn:swrl:var#n"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/ontology/foodreport#equalContinent"/>
+                        <swrl:argument1 rdf:resource="urn:swrl:var#c1"/>
+                        <swrl:argument2 rdf:resource="urn:swrl:var#c2"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/ontology/foodreport#countryName"/>
+                        <swrl:argument1 rdf:resource="urn:swrl:var#c1"/>
+                        <swrl:argument2 rdf:resource="urn:swrl:var#n"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/ontology/foodreport#countryName"/>
+                                <swrl:argument1 rdf:resource="urn:swrl:var#c2"/>
+                                <swrl:argument2 rdf:resource="urn:swrl:var#n"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/ontology/foodreport#equalCountry"/>
+                        <swrl:argument1 rdf:resource="urn:swrl:var#c1"/>
+                        <swrl:argument2 rdf:resource="urn:swrl:var#c2"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/ontology/foodreport#foodTypeName"/>
+                        <swrl:argument1 rdf:resource="urn:swrl:var#t1"/>
+                        <swrl:argument2 rdf:resource="urn:swrl:var#n"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/ontology/foodreport#foodTypeName"/>
+                                <swrl:argument1 rdf:resource="urn:swrl:var#t2"/>
+                                <swrl:argument2 rdf:resource="urn:swrl:var#n"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/ontology/foodreport#equalFoodType"/>
+                        <swrl:argument1 rdf:resource="urn:swrl:var#t1"/>
+                        <swrl:argument2 rdf:resource="urn:swrl:var#t2"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/ontology/foodreport#ingredientName"/>
+                        <swrl:argument1 rdf:resource="urn:swrl:var#i1"/>
+                        <swrl:argument2 rdf:resource="urn:swrl:var#n"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/ontology/foodreport#ingredientName"/>
+                                <swrl:argument1 rdf:resource="urn:swrl:var#i2"/>
+                                <swrl:argument2 rdf:resource="urn:swrl:var#n"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/ontology/foodreport#equalIngredient"/>
+                        <swrl:argument1 rdf:resource="urn:swrl:var#i1"/>
+                        <swrl:argument2 rdf:resource="urn:swrl:var#i2"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/ontology/foodreport#lawName"/>
+                        <swrl:argument1 rdf:resource="urn:swrl:var#l1"/>
+                        <swrl:argument2 rdf:resource="urn:swrl:var#n"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/ontology/foodreport#lawName"/>
+                                <swrl:argument1 rdf:resource="urn:swrl:var#l2"/>
+                                <swrl:argument2 rdf:resource="urn:swrl:var#n"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/ontology/foodreport#equalLaw"/>
+                        <swrl:argument1 rdf:resource="urn:swrl:var#l1"/>
+                        <swrl:argument2 rdf:resource="urn:swrl:var#l2"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/ontology/foodreport#recipeName"/>
+                        <swrl:argument1 rdf:resource="urn:swrl:var#r1"/>
+                        <swrl:argument2 rdf:resource="urn:swrl:var#n"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/ontology/foodreport#recipeName"/>
+                                <swrl:argument1 rdf:resource="urn:swrl:var#r2"/>
+                                <swrl:argument2 rdf:resource="urn:swrl:var#n"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/ontology/foodreport#equalRecipe"/>
+                        <swrl:argument1 rdf:resource="urn:swrl:var#r1"/>
+                        <swrl:argument2 rdf:resource="urn:swrl:var#r2"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+

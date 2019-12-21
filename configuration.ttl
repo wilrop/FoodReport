@@ -1,0 +1,66 @@
+@prefix :      <http://base/#> .
+@prefix tdb:   <http://jena.hpl.hp.com/2008/tdb#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix ja:    <http://jena.hpl.hp.com/2005/11/Assembler#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix fuseki: <http://jena.apache.org/fuseki#> .
+@prefix r2rml: <http://r2rml#> .
+     
+[] ja:loadClass "r2rml.jena.R2RMLAssembler" .
+r2rml:Model rdfs:subClassOf ja:NamedModel.
+
+<http://jena.apache.org/2016/tdb#DatasetTDB>
+        rdfs:subClassOf  ja:RDFDataset .
+
+ja:DatasetTxnMem  rdfs:subClassOf  ja:RDFDataset .
+
+tdb:DatasetTDB  rdfs:subClassOf  ja:RDFDataset .
+
+tdb:GraphTDB  rdfs:subClassOf  ja:Model .
+
+<http://jena.apache.org/2016/tdb#GraphTDB2>
+        rdfs:subClassOf  ja:Model .
+
+ja:MemoryDataset  rdfs:subClassOf  ja:RDFDataset .
+
+ja:RDFDatasetZero  rdfs:subClassOf  ja:RDFDataset .
+
+<http://jena.apache.org/text#TextDataset>
+        rdfs:subClassOf  ja:RDFDataset .
+
+:service_tdb_all  a                   fuseki:Service ;
+        rdfs:label                    "TDB foodreport" ;
+        fuseki:dataset                :r2rml_dataset ;
+        fuseki:name                   "foodreport" ;
+        fuseki:serviceQuery           "query" , "" , "sparql" ;
+        fuseki:serviceReadGraphStore  "get" ;
+        fuseki:serviceReadQuads       "" ;
+        fuseki:serviceReadWriteGraphStore
+                "data" ;
+        fuseki:serviceReadWriteQuads  "" ;
+        fuseki:serviceUpdate          "" , "update" ;
+        fuseki:serviceUpload          "upload" .
+
+:r2rml_dataset a ja:RDFDataset ;
+             ja:defaultGraph :r2rml_model .
+:r2rml_model a r2rml:Model ;
+             r2rml:baseModel :tdb_graph ;
+             r2rml:connectionURL "jdbc:sqlite:/Users/thomasvaeyens/Desktop/foodreport-database.db" ;
+             r2rml:mappingFile "/Users/thomasvaeyens/Desktop/foodreport-mapping.ttl" .
+
+:tdb_graph a tdb:GraphTDB ;
+                     tdb:dataset :tdb_dataset_readwrite .
+
+:tdb_dataset_readwrite
+        a             tdb:DatasetTDB ;
+        tdb:location  "/etc/fuseki/databases/foodreport" .
+
+<http://jena.apache.org/2016/tdb#GraphTDB>
+        rdfs:subClassOf  ja:Model .
+
+ja:RDFDatasetOne  rdfs:subClassOf  ja:RDFDataset .
+
+ja:RDFDatasetSink  rdfs:subClassOf  ja:RDFDataset .
+
+<http://jena.apache.org/2016/tdb#DatasetTDB2>
+        rdfs:subClassOf  ja:RDFDataset .

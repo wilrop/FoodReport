@@ -1,0 +1,297 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.foodreport.be/ontology"
+     xml:base="http://www.foodreport.be/ontology"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+     xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
+     xmlns:foodreport="http://www.foodreport.be/ontology#">
+    <owl:Ontology rdf:about="http://www.foodreport.be/data">
+    <owl:imports rdf:resource="http://www.foodreport.be/ontology"/>
+    </owl:Ontology>
+
+ <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+    <!-- http://www.foodreport.be/ontology/capellini -->
+
+    <owl:NamedIndividual rdf:about="http://www.foodreport.be/data/capellini">
+        <rdf:type rdf:resource="http://www.foodreport.be/ontology#Ingredient"/>
+        <foodreport:hasFoodType rdf:resource="http://www.foodreport.be/data/pastas"/>
+        <foodreport:calcium rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.0</foodreport:calcium>
+        <foodreport:calories rdf:datatype="http://www.w3.org/2001/XMLSchema#float">375.0</foodreport:calories>
+        <foodreport:carbohydrates rdf:datatype="http://www.w3.org/2001/XMLSchema#float">78.6</foodreport:carbohydrates>
+        <foodreport:fat rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.8</foodreport:fat>
+        <foodreport:ingredientName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Capellini</foodreport:ingredientName>
+        <foodreport:proteins rdf:datatype="http://www.w3.org/2001/XMLSchema#float">12.5</foodreport:proteins>
+        <foodreport:sodium rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.0</foodreport:sodium>
+        <foodreport:sugar rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.8</foodreport:sugar>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.foodreport.be/ontology/europe -->
+
+    <owl:NamedIndividual rdf:about="http://www.foodreport.be/data/europe">
+        <rdf:type rdf:resource="http://www.foodreport.be/ontology#Continent"/>
+        <foodreport:continentName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Europe</foodreport:continentName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.foodreport.be/ontology/france -->
+
+    <owl:NamedIndividual rdf:about="http://www.foodreport.be/data/france">
+        <rdf:type rdf:resource="http://www.foodreport.be/ontology#Country"/>
+        <foodreport:imposes rdf:resource="http://www.foodreport.be/data/80hourweek"/>
+        <foodreport:isPartOf rdf:resource="http://www.foodreport.be/data/europe"/>
+        <foodreport:countryName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">France</foodreport:countryName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.foodreport.be/ontology/fruits -->
+
+    <owl:NamedIndividual rdf:about="http://www.foodreport.be/data/fruits">
+        <rdf:type rdf:resource="http://www.foodreport.be/ontology#FoodType"/>
+        <foodreport:foodTypeName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fuits</foodreport:foodTypeName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.foodreport.be/ontology/italy -->
+
+    <owl:NamedIndividual rdf:about="http://www.foodreport.be/data/italy">
+        <rdf:type rdf:resource="http://www.foodreport.be/ontology#Country"/>
+        <foodreport:isPartOf rdf:resource="http://www.foodreport.be/data/europe"/>
+        <foodreport:countryName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Italy</foodreport:countryName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.foodreport.be/ontology/mexico -->
+
+    <owl:NamedIndividual rdf:about="http://www.foodreport.be/data/mexico">
+        <rdf:type rdf:resource="http://www.foodreport.be/ontology#Country"/>
+        <foodreport:imposes rdf:resource="http://www.foodreport.be/data/pesticiderestrictionk58"/>
+        <foodreport:imposes rdf:resource="http://www.foodreport.be/data/80hourweek"/>
+        <foodreport:isPartOf rdf:resource="http://www.foodreport.be/data/northamerica"/>
+        <foodreport:countryName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mexico</foodreport:countryName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.foodreport.be/ontology/northamerica -->
+
+    <owl:NamedIndividual rdf:about="http://www.foodreport.be/data/northamerica">
+        <rdf:type rdf:resource="http://www.foodreport.be/ontology#Continent"/>
+        <foodreport:continentName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">North America</foodreport:continentName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.foodreport.be/ontology/oils -->
+
+    <owl:NamedIndividual rdf:about="http://www.foodreport.be/data/oils">
+        <rdf:type rdf:resource="http://www.foodreport.be/ontology#FoodType"/>
+        <foodreport:foodTypeName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Oils</foodreport:foodTypeName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.foodreport.be/ontology/oliveoil -->
+
+    <owl:NamedIndividual rdf:about="http://www.foodreport.be/data/oliveoil">
+        <rdf:type rdf:resource="http://www.foodreport.be/ontology#Ingredient"/>
+        <foodreport:hasFoodType rdf:resource="http://www.foodreport.be/data/oils"/>
+        <foodreport:manufactoredFrom rdf:resource="http://www.foodreport.be/data/italy"/>
+        <foodreport:calcium rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</foodreport:calcium>
+        <foodreport:calories rdf:datatype="http://www.w3.org/2001/XMLSchema#float">884.0</foodreport:calories>
+        <foodreport:carbohydrates rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.0</foodreport:carbohydrates>
+        <foodreport:fat rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.0</foodreport:fat>
+        <foodreport:fat rdf:datatype="http://www.w3.org/2001/XMLSchema#float">100.0</foodreport:fat>
+        <foodreport:fat rdf:datatype="http://www.w3.org/2001/XMLSchema#float">2.0</foodreport:fat>
+        <foodreport:ingredientName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Olive Oil</foodreport:ingredientName>
+        <foodreport:sugar rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.0</foodreport:sugar>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.foodreport.be/ontology/pastas -->
+
+    <owl:NamedIndividual rdf:about="http://www.foodreport.be/data/pastas">
+        <rdf:type rdf:resource="http://www.foodreport.be/ontology#FoodType"/>
+        <foodreport:foodTypeName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pastas</foodreport:foodTypeName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.foodreport.be/ontology/pesticiderestrictionk58 -->
+
+    <owl:NamedIndividual rdf:about="http://www.foodreport.be/data/pesticiderestrictionk58">
+        <rdf:type rdf:resource="http://www.foodreport.be/ontology#Law"/>
+        <foodreport:appliesToFoodType rdf:resource="http://www.foodreport.be/data/fruits"/>
+        <foodreport:environmentScore rdf:datatype="http://www.w3.org/2001/XMLSchema#float">85.0</foodreport:environmentScore>
+        <foodreport:lawName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pesticide restriction K-58</foodreport:lawName>
+        <foodreport:text rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pesticides with dangerous chemicals are not allowed.</foodreport:text>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.foodreport.be/ontology/spaghettibolognese -->
+
+    <owl:NamedIndividual rdf:about="http://www.foodreport.be/data/spaghettibolognese">
+        <rdf:type rdf:resource="http://www.foodreport.be/ontology#Recipe"/>
+        <foodreport:needsIngredient rdf:resource="http://www.foodreport.be/data/capellini"/>
+        <foodreport:needsIngredient rdf:resource="http://www.foodreport.be/data/oliveoil"/>
+        <foodreport:needsIngredient rdf:resource="http://www.foodreport.be/data/tomato"/>
+        <foodreport:recipeName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Spaghetti bolognese</foodreport:recipeName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.foodreport.be/ontology/spaghettibolognese-1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.foodreport.be/data/spaghettibolognese-1">
+        <rdf:type rdf:resource="http://www.foodreport.be/ontology#Step"/>
+        <foodreport:describesRecipe rdf:resource="http://www.foodreport.be/data/spaghettibolognese"/>
+        <foodreport:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Put a large saucepan on a medium heat and add 1 tbsp olive oil.</foodreport:description>
+        <foodreport:orderNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</foodreport:orderNumber>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.foodreport.be/ontology/spaghettibolognese-2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.foodreport.be/data/spaghettibolognese-2">
+        <rdf:type rdf:resource="http://www.foodreport.be/ontology#Step"/>
+        <foodreport:describesRecipe rdf:resource="http://www.foodreport.be/data/spaghettibolognese"/>
+        <foodreport:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Add 4 finely chopped bacon rashers and fry for 10 mins until golden and crisp.</foodreport:description>
+        <foodreport:orderNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#int">2</foodreport:orderNumber>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.foodreport.be/ontology/tomato -->
+
+    <owl:NamedIndividual rdf:about="http://www.foodreport.be/data/tomato">
+        <rdf:type rdf:resource="http://www.foodreport.be/ontology#Ingredient"/>
+        <foodreport:hasFoodType rdf:resource="http://www.foodreport.be/data/fruits"/>
+        <foodreport:manufactoredFrom rdf:resource="http://www.foodreport.be/data/france"/>
+        <foodreport:manufactoredFrom rdf:resource="http://www.foodreport.be/data/mexico"/>
+        <foodreport:calcium rdf:datatype="http://www.w3.org/2001/XMLSchema#float">18.0</foodreport:calcium>
+        <foodreport:calories rdf:datatype="http://www.w3.org/2001/XMLSchema#float">32.0</foodreport:calories>
+        <foodreport:carbohydrates rdf:datatype="http://www.w3.org/2001/XMLSchema#float">5.8</foodreport:carbohydrates>
+        <foodreport:fat rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.3</foodreport:fat>
+        <foodreport:ingredientName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tomato</foodreport:ingredientName>
+        <foodreport:proteins rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.3</foodreport:proteins>
+        <foodreport:sodium rdf:datatype="http://www.w3.org/2001/XMLSchema#float">7.5</foodreport:sodium>
+        <foodreport:sugar rdf:datatype="http://www.w3.org/2001/XMLSchema#float">3.9</foodreport:sugar>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.foodreport.be/ontology/tomatosoup -->
+
+    <owl:NamedIndividual rdf:about="http://www.foodreport.be/data/tomatosoup">
+        <rdf:type rdf:resource="http://www.foodreport.be/ontology#Recipe"/>
+        <foodreport:needsIngredient rdf:resource="http://www.foodreport.be/data/tomato"/>
+        <foodreport:recipeName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tomato soup</foodreport:recipeName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.foodreport.be/ontology/tomatosoup-1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.foodreport.be/data/tomatosoup-1">
+        <rdf:type rdf:resource="http://www.foodreport.be/ontology#Step"/>
+        <foodreport:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cut 5 tomatoes in small pieces.</foodreport:description>
+        <foodreport:orderNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</foodreport:orderNumber>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.foodreport.be/ontology/tomatosoup-2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.foodreport.be/data/tomatosoup-2">
+        <rdf:type rdf:resource="http://www.foodreport.be/ontology#Step"/>
+        <foodreport:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fill a pot with (hot) water and bowl it to about 100 degrees celcius.</foodreport:description>
+        <foodreport:orderNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#int">2</foodreport:orderNumber>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.foodreport.be/ontology/tomatosoup-3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.foodreport.be/data/tomatosoup-3">
+        <rdf:type rdf:resource="http://www.foodreport.be/ontology#Step"/>
+        <foodreport:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Add tomatoes to the bowl.</foodreport:description>
+        <foodreport:orderNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#int">3</foodreport:orderNumber>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.foodreport.be/ontology/trajectory18-france-italy -->
+
+    <owl:NamedIndividual rdf:about="http://www.foodreport.be/data/trajectory18-france-italy">
+        <rdf:type rdf:resource="http://www.foodreport.be/ontology#Trajectory"/>
+        <foodreport:ships rdf:resource="http://www.foodreport.be/data/tomato"/>
+        <foodreport:trajectoryFrom rdf:resource="http://www.foodreport.be/data/france"/>
+        <foodreport:trajectoryTo rdf:resource="http://www.foodreport.be/data/italy"/>
+        <foodreport:distance rdf:datatype="http://www.w3.org/2001/XMLSchema#float">580.0</foodreport:distance>
+        <foodreport:trajectoryName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">trajectory18</foodreport:trajectoryName>
+        <foodreport:trajectoryScore rdf:datatype="http://www.w3.org/2001/XMLSchema#float">42.0</foodreport:trajectoryScore>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.foodreport.be/ontology/trajectory18-mexico-italy -->
+
+    <owl:NamedIndividual rdf:about="http://www.foodreport.be/data/trajectory18-mexico-italy">
+        <rdf:type rdf:resource="http://www.foodreport.be/ontology#Trajectory"/>
+        <foodreport:ships rdf:resource="http://www.foodreport.be/data/tomato"/>
+        <foodreport:trajectoryFrom rdf:resource="http://www.foodreport.be/data/mexico"/>
+        <foodreport:trajectoryTo rdf:resource="http://www.foodreport.be/data/italy"/>
+        <foodreport:distance rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1997.0</foodreport:distance>
+        <foodreport:trajectoryName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">trajectory18</foodreport:trajectoryName>
+        <foodreport:trajectoryScore rdf:datatype="http://www.w3.org/2001/XMLSchema#float">30.0</foodreport:trajectoryScore>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.foodreport.be/ontology/trajectory83-france-italy -->
+
+    <owl:NamedIndividual rdf:about="http://www.foodreport.be/data/trajectory83-france-italy">
+        <rdf:type rdf:resource="http://www.foodreport.be/ontology#Trajectory"/>
+        <foodreport:ships rdf:resource="http://www.foodreport.be/data/tomato"/>
+        <foodreport:trajectoryFrom rdf:resource="http://www.foodreport.be/data/france"/>
+        <foodreport:trajectoryTo rdf:resource="http://www.foodreport.be/data/italy"/>
+        <foodreport:distance rdf:datatype="http://www.w3.org/2001/XMLSchema#float">555.0</foodreport:distance>
+        <foodreport:trajectoryName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">trajectory83</foodreport:trajectoryName>
+        <foodreport:trajectoryScore rdf:datatype="http://www.w3.org/2001/XMLSchema#float">44.0</foodreport:trajectoryScore>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.foodreport.be/ontology/80hourweek -->
+
+    <owl:NamedIndividual rdf:about="http://www.foodreport.be/data/80hourweek">
+        <rdf:type rdf:resource="http://www.foodreport.be/ontology#Law"/>
+        <foodreport:appliesToFoodType rdf:resource="http://www.foodreport.be/data/fruits"/>
+        <foodreport:appliesToFoodType rdf:resource="http://www.foodreport.be/data/oils"/>
+        <foodreport:appliesToFoodType rdf:resource="http://www.foodreport.be/data/pastas"/>
+        <foodreport:labourScore rdf:datatype="http://www.w3.org/2001/XMLSchema#float">12.0</foodreport:labourScore>
+        <foodreport:lawName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">80 hours week</foodreport:lawName>
+        <foodreport:text rdf:datatype="http://www.w3.org/2001/XMLSchema#string">All workmen have to work at least 80 hours a week.</foodreport:text>
+    </owl:NamedIndividual>
+    
+</rdf:RDF>

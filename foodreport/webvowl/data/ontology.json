@@ -1,0 +1,918 @@
+{
+  "_comment" : "Created with OWL2VOWL (version 0.3.5), http://vowl.visualdataweb.org",
+  "header" : {
+    "languages" : [ "en" ],
+    "baseIris" : [ "http://www.w3.org/1999/02/22-rdf-syntax-ns", "http://www.foodreport.be/ontology", "http://www.w3.org/2000/01/rdf-schema", "http://www.w3.org/2001/XMLSchema" ],
+    "iri" : "http://www.foodreport.be/ontology"
+  },
+  "namespace" : [ ],
+  "class" : [ {
+    "id" : "0",
+    "type" : "owl:Class"
+  }, {
+    "id" : "1",
+    "type" : "owl:Class"
+  }, {
+    "id" : "4",
+    "type" : "owl:Class"
+  }, {
+    "id" : "3",
+    "type" : "owl:Class"
+  }, {
+    "id" : "8",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "18",
+    "type" : "owl:Class"
+  }, {
+    "id" : "26",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "27",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "30",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "31",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "32",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "33",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "36",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "16",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "29",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "37",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "39",
+    "type" : "owl:Class"
+  }, {
+    "id" : "6",
+    "type" : "owl:Class"
+  }, {
+    "id" : "35",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "41",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "42",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "20",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "14",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "10",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "24",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "45",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "48",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "51",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "22",
+    "type" : "owl:Class"
+  } ],
+  "classAttribute" : [ {
+    "iri" : "http://www.foodreport.be/ontology#Trajectory",
+    "baseIri" : "http://www.foodreport.be/ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Trajectory",
+      "en" : "Trajectory"
+    },
+    "comment" : {
+      "en" : "A Trajectory runs from one country to another, transporting a certain ingredient. It does may or may not encapsulate the use of multiple types of transport."
+    },
+    "id" : "0"
+  }, {
+    "iri" : "http://www.foodreport.be/ontology#Ingredient",
+    "baseIri" : "http://www.foodreport.be/ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Ingredient",
+      "en" : "Ingredient"
+    },
+    "comment" : {
+      "en" : "An ingredient is a specific piece of food required to prepare recipies."
+    },
+    "id" : "1"
+  }, {
+    "iri" : "http://www.foodreport.be/ontology#FoodType",
+    "baseIri" : "http://www.foodreport.be/ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "FoodType",
+      "en" : "FoodType"
+    },
+    "comment" : {
+      "en" : "A FoodType is a group of related ingredients."
+    },
+    "id" : "4"
+  }, {
+    "iri" : "http://www.foodreport.be/ontology#Law",
+    "baseIri" : "http://www.foodreport.be/ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Law",
+      "en" : "Law"
+    },
+    "comment" : {
+      "en" : "A Law is a rule that is created and enforced through social or governmental institutions to regulate behavior."
+    },
+    "id" : "3"
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#float",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "8",
+    "label" : {
+      "IRI-based" : "float"
+    }
+  }, {
+    "iri" : "http://www.foodreport.be/ontology#Step",
+    "baseIri" : "http://www.foodreport.be/ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Step",
+      "en" : "Step"
+    },
+    "comment" : {
+      "en" : "A Step is a specific instruction in the preparation of a recipe."
+    },
+    "id" : "18"
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "26",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#float",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "27",
+    "label" : {
+      "IRI-based" : "float"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "30",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#float",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "31",
+    "label" : {
+      "IRI-based" : "float"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#int",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "32",
+    "label" : {
+      "IRI-based" : "int"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#float",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "33",
+    "label" : {
+      "IRI-based" : "float"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "36",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "16",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "29",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#float",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "37",
+    "label" : {
+      "IRI-based" : "float"
+    }
+  }, {
+    "iri" : "http://www.foodreport.be/ontology#Continent",
+    "baseIri" : "http://www.foodreport.be/ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Continent",
+      "en" : "Continent"
+    },
+    "comment" : {
+      "en" : "A Continent is any of the world's main continuous expanses of land."
+    },
+    "id" : "39"
+  }, {
+    "iri" : "http://www.foodreport.be/ontology#Country",
+    "baseIri" : "http://www.foodreport.be/ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Country",
+      "en" : "Country"
+    },
+    "comment" : {
+      "en" : "A Country is a nation with its own government, occupying a particular territory."
+    },
+    "id" : "6"
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#float",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "35",
+    "label" : {
+      "IRI-based" : "float"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "41",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "42",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "20",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#float",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "14",
+    "label" : {
+      "IRI-based" : "float"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#float",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "10",
+    "label" : {
+      "IRI-based" : "float"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#float",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "24",
+    "label" : {
+      "IRI-based" : "float"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "45",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#float",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "48",
+    "label" : {
+      "IRI-based" : "float"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#float",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "51",
+    "label" : {
+      "IRI-based" : "float"
+    }
+  }, {
+    "iri" : "http://www.foodreport.be/ontology#Recipe",
+    "baseIri" : "http://www.foodreport.be/ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Recipe",
+      "en" : "Recipe"
+    },
+    "comment" : {
+      "en" : "A Recipe is a set of instructions that describe how to prepare or make a meal, requiring certain ingredients."
+    },
+    "id" : "22"
+  } ],
+  "property" : [ {
+    "id" : "2",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "5",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "7",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "9",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "11",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "12",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "13",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "15",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "17",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "19",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "21",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "23",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "25",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "28",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "34",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "38",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "40",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "43",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "44",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "46",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "47",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "49",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "50",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "52",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "53",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "54",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "55",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "56",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "57",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "58",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "59",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "60",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "61",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "62",
+    "type" : "owl:datatypeProperty"
+  } ],
+  "propertyAttribute" : [ {
+    "iri" : "http://www.foodreport.be/ontology#appliesToFoodType",
+    "baseIri" : "http://www.foodreport.be/ontology",
+    "range" : "4",
+    "label" : {
+      "IRI-based" : "appliesToFoodType",
+      "en" : "appliesToFoodType"
+    },
+    "domain" : "3",
+    "comment" : {
+      "en" : "A law applies to one or multiple types of food whereas a specific food type doesn't necessarily have to be involved in a law. It can however be influenced by one or multiple laws."
+    },
+    "attributes" : [ "object" ],
+    "id" : "2"
+  }, {
+    "iri" : "http://www.foodreport.be/ontology#trajectoryFrom",
+    "baseIri" : "http://www.foodreport.be/ontology",
+    "range" : "6",
+    "label" : {
+      "IRI-based" : "trajectoryFrom",
+      "en" : "trajectoryFrom"
+    },
+    "domain" : "0",
+    "comment" : {
+      "en" : "A trajectory ships ingredients from exactly one country but a country is not necessarily a part of a trajectory. A country can be part of multiple trajectories."
+    },
+    "attributes" : [ "object", "functional" ],
+    "id" : "5"
+  }, {
+    "iri" : "http://www.foodreport.be/ontology#trajectoryScore",
+    "baseIri" : "http://www.foodreport.be/ontology",
+    "range" : "8",
+    "label" : {
+      "IRI-based" : "trajectoryScore",
+      "en" : "TrajectoryScore"
+    },
+    "domain" : "0",
+    "comment" : {
+      "en" : "A TrajectoryScore is a numerical indicator on a scale of 0 to 100, with 0 being worst and 100 being best, of the environmental impact of this transport."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "7"
+  }, {
+    "iri" : "http://www.foodreport.be/ontology#environmentScore",
+    "baseIri" : "http://www.foodreport.be/ontology",
+    "range" : "10",
+    "label" : {
+      "IRI-based" : "environmentScore",
+      "en" : "EnvironmentScore"
+    },
+    "domain" : "3",
+    "comment" : {
+      "en" : "An EnvironmentScore is a numerical indicator on a scale of 0 to 100, with 0 being worst and 100 being best, of the environmental impact of this law."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "9"
+  }, {
+    "iri" : "http://www.foodreport.be/ontology#manufactoredFrom",
+    "baseIri" : "http://www.foodreport.be/ontology",
+    "range" : "6",
+    "label" : {
+      "IRI-based" : "manufactoredFrom",
+      "en" : "manufactoredFrom"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "An ingredient is manufactured in one or more countries whereas a country doesn't necessarily manufactures ingredients. However it can also manufacture multiple ingredients."
+    },
+    "attributes" : [ "object" ],
+    "id" : "11"
+  }, {
+    "iri" : "http://www.foodreport.be/ontology#isPartOfSameContinent",
+    "baseIri" : "http://www.foodreport.be/ontology",
+    "range" : "6",
+    "label" : {
+      "IRI-based" : "isPartOfSameContinent",
+      "en" : "isPartOfSameContinent"
+    },
+    "domain" : "6",
+    "attributes" : [ "object" ],
+    "id" : "12"
+  }, {
+    "iri" : "http://www.foodreport.be/ontology#distance",
+    "baseIri" : "http://www.foodreport.be/ontology",
+    "range" : "14",
+    "label" : {
+      "IRI-based" : "distance",
+      "en" : "Distance"
+    },
+    "domain" : "0",
+    "comment" : {
+      "en" : "A distance is a numerical indicator of the distance a trajectory covers. This is not the straight line distance between the origin and destination, but the actual distance the trajectory covers."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "13"
+  }, {
+    "iri" : "http://www.foodreport.be/ontology#ingredientName",
+    "baseIri" : "http://www.foodreport.be/ontology",
+    "range" : "16",
+    "label" : {
+      "IRI-based" : "ingredientName",
+      "en" : "IngredientName"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "A IngredientName indicates the (unique) name of a Ingredient."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "15"
+  }, {
+    "iri" : "http://www.foodreport.be/ontology#imposes",
+    "baseIri" : "http://www.foodreport.be/ontology",
+    "range" : "3",
+    "label" : {
+      "IRI-based" : "imposes",
+      "en" : "imposes"
+    },
+    "domain" : "6",
+    "comment" : {
+      "en" : "A country can impose none or multiple laws and a law can be imposed by one or multiple countries."
+    },
+    "attributes" : [ "object" ],
+    "id" : "17"
+  }, {
+    "iri" : "http://www.foodreport.be/ontology#description",
+    "baseIri" : "http://www.foodreport.be/ontology",
+    "range" : "20",
+    "label" : {
+      "IRI-based" : "description",
+      "en" : "Description"
+    },
+    "domain" : "18",
+    "comment" : {
+      "en" : "A Description is the written human-readable text that corresponds with the instructions of a Step"
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "19"
+  }, {
+    "iri" : "http://www.foodreport.be/ontology#describesRecipe",
+    "baseIri" : "http://www.foodreport.be/ontology",
+    "range" : "22",
+    "label" : {
+      "IRI-based" : "describesRecipe",
+      "en" : "describesRecipe"
+    },
+    "domain" : "18",
+    "comment" : {
+      "en" : "A step describes (part of) one specific recipe and a recipe can be described by one or multiple steps."
+    },
+    "attributes" : [ "object", "functional" ],
+    "id" : "21"
+  }, {
+    "iri" : "http://www.foodreport.be/ontology#fat",
+    "baseIri" : "http://www.foodreport.be/ontology",
+    "range" : "24",
+    "label" : {
+      "IRI-based" : "fat",
+      "en" : "Fat"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "Fat: Fat is the sum of saturated, monounsaturated and polyunsaturated fats which can be found in food. The amount will be given in grams per 100 grams of the ingredient (per 100 milliliters if it is present in a liquid)."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "23"
+  }, {
+    "iri" : "http://www.foodreport.be/ontology/alternativeTrajectory",
+    "baseIri" : "http://www.foodreport.be/ontology",
+    "range" : "0",
+    "label" : {
+      "IRI-based" : "alternativeTrajectory",
+      "en" : "alternativeTrajectory"
+    },
+    "domain" : "0",
+    "comment" : {
+      "en" : "A trajectory can be an alternative trajectory of one or multiple other trajectories. Alternative trajectories ship the same ingredient from the same origin to the same destination. This object property is automatically inferred using defined rules."
+    },
+    "attributes" : [ "object", "external" ],
+    "id" : "25"
+  }, {
+    "iri" : "http://www.foodreport.be/ontology#lawName",
+    "baseIri" : "http://www.foodreport.be/ontology",
+    "range" : "29",
+    "label" : {
+      "IRI-based" : "lawName",
+      "en" : "LawName"
+    },
+    "domain" : "3",
+    "comment" : {
+      "en" : "A LawName indicates the (unique) name of a Law."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "28"
+  }, {
+    "iri" : "http://www.foodreport.be/ontology#carbohydrates",
+    "baseIri" : "http://www.foodreport.be/ontology",
+    "range" : "35",
+    "label" : {
+      "IRI-based" : "carbohydrates",
+      "en" : "Carbohydrates"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "Carbohydrates are biomolecules consisting of carbon (C), hydrogen (H) and oxygen (O) atoms which can be found in food. The amount will be given in grams per 100 grams of the ingredient (per 100 milliliters if it is present in a liquid)."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "34"
+  }, {
+    "iri" : "http://www.foodreport.be/ontology#sugar",
+    "baseIri" : "http://www.foodreport.be/ontology",
+    "range" : "27",
+    "label" : {
+      "IRI-based" : "sugar",
+      "en" : "Sugar"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "Sugar is the generic name for sweet-tasting, soluble carbohydrates, which can be found in food. The amount will be given in grams per 100 grams of the ingredient (per 100 milliliters if it is present in a liquid)."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "38"
+  }, {
+    "iri" : "http://www.foodreport.be/ontology#recipeName",
+    "baseIri" : "http://www.foodreport.be/ontology",
+    "range" : "36",
+    "label" : {
+      "IRI-based" : "recipeName",
+      "en" : "RecipeName"
+    },
+    "domain" : "22",
+    "comment" : {
+      "en" : "A RecipeName indicates the (unique) name of a Recipe."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "40"
+  }, {
+    "iri" : "http://www.foodreport.be/ontology#needsIngredient",
+    "baseIri" : "http://www.foodreport.be/ontology",
+    "range" : "1",
+    "label" : {
+      "IRI-based" : "needsIngredient",
+      "en" : "needsIngredient"
+    },
+    "domain" : "22",
+    "comment" : {
+      "en" : "A recipe needs one or multiple ingredients while an ingredient isn't always used in a recipe. Nevertheless it can be needed by multiple different recipes."
+    },
+    "attributes" : [ "object" ],
+    "id" : "43"
+  }, {
+    "iri" : "http://www.foodreport.be/ontology#trajectoryName",
+    "baseIri" : "http://www.foodreport.be/ontology",
+    "range" : "30",
+    "label" : {
+      "IRI-based" : "trajectoryName",
+      "en" : "TrajectoryName"
+    },
+    "domain" : "0",
+    "comment" : {
+      "en" : "A TrajectoryName indicates the (unique) name of a Trajectory."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "44"
+  }, {
+    "iri" : "http://www.foodreport.be/ontology#isPartOf",
+    "baseIri" : "http://www.foodreport.be/ontology",
+    "range" : "39",
+    "label" : {
+      "IRI-based" : "isPartOf",
+      "en" : "isPartOf"
+    },
+    "domain" : "6",
+    "comment" : {
+      "en" : "A country is part of exactly one continent and a continent consist of one or more countries."
+    },
+    "attributes" : [ "object", "functional" ],
+    "id" : "46"
+  }, {
+    "iri" : "http://www.foodreport.be/ontology#calcium",
+    "baseIri" : "http://www.foodreport.be/ontology",
+    "range" : "48",
+    "label" : {
+      "IRI-based" : "calcium",
+      "en" : "Calcium"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "Calcium is a reactive metal that forms a dark oxide-nitride layer when exposed to air that can be found in food.  The amount will be given in grams per 100 grams of the ingredient (per 100 milliliters if it is present in a liquid)."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "47"
+  }, {
+    "iri" : "http://www.foodreport.be/ontology#continentName",
+    "baseIri" : "http://www.foodreport.be/ontology",
+    "range" : "41",
+    "label" : {
+      "IRI-based" : "continentName",
+      "en" : "ContinentName"
+    },
+    "domain" : "39",
+    "comment" : {
+      "en" : "A ContinentName indicates the (unique) name of a Continent."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "49"
+  }, {
+    "iri" : "http://www.foodreport.be/ontology#calories",
+    "baseIri" : "http://www.foodreport.be/ontology",
+    "range" : "51",
+    "label" : {
+      "IRI-based" : "calories",
+      "en" : "Calories"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "Calories are a unit of energy which can be found in food. The amount will be given in kcal per 100 grams of the ingredient (per 100 milliliters if it is present in a liquid)."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "50"
+  }, {
+    "iri" : "http://www.foodreport.be/ontology#trajectoryTo",
+    "baseIri" : "http://www.foodreport.be/ontology",
+    "range" : "6",
+    "label" : {
+      "IRI-based" : "trajectoryTo",
+      "en" : "trajectoryTo"
+    },
+    "domain" : "0",
+    "comment" : {
+      "en" : "A trajectory ships ingredients to exactly one country but a country is not necessarily a part of a trajectory. A country can be part of multiple trajectories."
+    },
+    "attributes" : [ "object", "functional" ],
+    "id" : "52"
+  }, {
+    "iri" : "http://www.foodreport.be/ontology#ships",
+    "baseIri" : "http://www.foodreport.be/ontology",
+    "range" : "1",
+    "label" : {
+      "IRI-based" : "ships",
+      "en" : "ships"
+    },
+    "domain" : "0",
+    "comment" : {
+      "en" : "A specific trajectory only ships one ingredient and an ingredient can be shipped using one or multiple trajectories."
+    },
+    "attributes" : [ "object", "functional" ],
+    "id" : "53"
+  }, {
+    "iri" : "http://www.foodreport.be/ontology#sodium",
+    "baseIri" : "http://www.foodreport.be/ontology",
+    "range" : "33",
+    "label" : {
+      "IRI-based" : "sodium",
+      "en" : "Sodium"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "Sodium is a soft, silvery-white, highly reactive metal which can be found in food. The amount will be given in grams per 100 grams of the ingredient (per 100 milliliters if it is present in a liquid)."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "54"
+  }, {
+    "iri" : "http://www.foodreport.be/ontology#countryName",
+    "baseIri" : "http://www.foodreport.be/ontology",
+    "range" : "42",
+    "label" : {
+      "IRI-based" : "countryName",
+      "en" : "CountryName"
+    },
+    "domain" : "6",
+    "comment" : {
+      "en" : "A CountryName indicates the (unique) name of a Country."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "55"
+  }, {
+    "iri" : "http://www.foodreport.be/ontology#labourScore",
+    "baseIri" : "http://www.foodreport.be/ontology",
+    "range" : "37",
+    "label" : {
+      "IRI-based" : "labourScore",
+      "en" : "LabourScore"
+    },
+    "domain" : "3",
+    "comment" : {
+      "en" : "A LabourScore is a numerical indicator on a scale of 0 to 100, with 0 being worst and 100 being best, of the impact on labour of this law."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "56"
+  }, {
+    "iri" : "http://www.foodreport.be/ontology#proteins",
+    "baseIri" : "http://www.foodreport.be/ontology",
+    "range" : "31",
+    "label" : {
+      "IRI-based" : "proteins",
+      "en" : "Proteins"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "Proteins are large biomolecules consisting of one or more long chains of amino acid residues which can be found in food. The amount will be given in grams per 100 grams of the ingredient (per 100 milliliters if it is present in a liquid)."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "57"
+  }, {
+    "iri" : "http://www.foodreport.be/ontology#orderNumber",
+    "baseIri" : "http://www.foodreport.be/ontology",
+    "range" : "32",
+    "label" : {
+      "IRI-based" : "orderNumber",
+      "en" : "OrderNumber"
+    },
+    "domain" : "18",
+    "comment" : {
+      "en" : "An OrderNumber is the relative place of occurrence of a step in a Recipe."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "58"
+  }, {
+    "iri" : "http://www.foodreport.be/ontology/appliesToIngredient",
+    "baseIri" : "http://www.foodreport.be/ontology",
+    "range" : "1",
+    "label" : {
+      "IRI-based" : "appliesToIngredient",
+      "en" : "appliesToIngredient"
+    },
+    "domain" : "3",
+    "comment" : {
+      "en" : "A law applies to one or multiple ingredients whereas a specific ingredient doesn't necessarily have to be involved in a law. It can however be influenced by one or multiple laws."
+    },
+    "attributes" : [ "object", "external" ],
+    "id" : "59"
+  }, {
+    "iri" : "http://www.foodreport.be/ontology#foodTypeName",
+    "baseIri" : "http://www.foodreport.be/ontology",
+    "range" : "45",
+    "label" : {
+      "IRI-based" : "foodTypeName",
+      "en" : "FoodTypeName"
+    },
+    "domain" : "4",
+    "comment" : {
+      "en" : "A FoodTypeName indicates the (unique) name of a FoodType."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "60"
+  }, {
+    "iri" : "http://www.foodreport.be/ontology#hasFoodType",
+    "baseIri" : "http://www.foodreport.be/ontology",
+    "range" : "4",
+    "label" : {
+      "IRI-based" : "hasFoodType",
+      "en" : "hasFoodType"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "An ingredient has exactly one food type while a food type contains one or multiple ingredients. Note that a food type can also contain no ingredients at all, in the case that none are defined."
+    },
+    "attributes" : [ "object", "functional" ],
+    "id" : "61"
+  }, {
+    "iri" : "http://www.foodreport.be/ontology#text",
+    "baseIri" : "http://www.foodreport.be/ontology",
+    "range" : "26",
+    "label" : {
+      "IRI-based" : "text",
+      "en" : "Text"
+    },
+    "domain" : "3",
+    "comment" : {
+      "en" : "A Text is the law text that corresponds with a Law."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "62"
+  } ]
+}

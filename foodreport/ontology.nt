@@ -1,0 +1,494 @@
+<http://www.foodreport.be/ontology> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# http://www.foodreport.be/ontology#appliesToFoodType
+<http://www.foodreport.be/ontology#appliesToFoodType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.foodreport.be/ontology#appliesToFoodType> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.foodreport.be/ontology#Law> .
+<http://www.foodreport.be/ontology#appliesToFoodType> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.foodreport.be/ontology#FoodType> .
+<http://www.foodreport.be/ontology#appliesToFoodType> <http://www.w3.org/2000/01/rdf-schema#comment> "A law applies to one or multiple types of food whereas a specific food type doesn't necessarily have to be involved in a law. It can however be influenced by one or multiple laws."@en .
+<http://www.foodreport.be/ontology#appliesToFoodType> <http://www.w3.org/2000/01/rdf-schema#label> "appliesToFoodType"@en .
+# 
+# http://www.foodreport.be/ontology#describesRecipe
+<http://www.foodreport.be/ontology#describesRecipe> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.foodreport.be/ontology#describesRecipe> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.foodreport.be/ontology#describesRecipe> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.foodreport.be/ontology#Step> .
+<http://www.foodreport.be/ontology#describesRecipe> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.foodreport.be/ontology#Recipe> .
+<http://www.foodreport.be/ontology#describesRecipe> <http://www.w3.org/2000/01/rdf-schema#comment> "A step describes (part of) one specific recipe and a recipe can be described by one or multiple steps."@en .
+<http://www.foodreport.be/ontology#describesRecipe> <http://www.w3.org/2000/01/rdf-schema#label> "describesRecipe"@en .
+# 
+# http://www.foodreport.be/ontology#hasFoodType
+<http://www.foodreport.be/ontology#hasFoodType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.foodreport.be/ontology#hasFoodType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.foodreport.be/ontology#hasFoodType> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.foodreport.be/ontology#Ingredient> .
+<http://www.foodreport.be/ontology#hasFoodType> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.foodreport.be/ontology#FoodType> .
+<http://www.foodreport.be/ontology#hasFoodType> <http://www.w3.org/2000/01/rdf-schema#comment> "An ingredient has exactly one food type while a food type contains one or multiple ingredients. Note that a food type can also contain no ingredients at all, in the case that none are defined."@en .
+<http://www.foodreport.be/ontology#hasFoodType> <http://www.w3.org/2000/01/rdf-schema#label> "hasFoodType"@en .
+# 
+# http://www.foodreport.be/ontology#imposes
+<http://www.foodreport.be/ontology#imposes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.foodreport.be/ontology#imposes> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.foodreport.be/ontology#Country> .
+<http://www.foodreport.be/ontology#imposes> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.foodreport.be/ontology#Law> .
+<http://www.foodreport.be/ontology#imposes> <http://www.w3.org/2000/01/rdf-schema#comment> "A country can impose none or multiple laws and a law can be imposed by one or multiple countries."@en .
+<http://www.foodreport.be/ontology#imposes> <http://www.w3.org/2000/01/rdf-schema#label> "imposes"@en .
+# 
+# http://www.foodreport.be/ontology#isPartOf
+<http://www.foodreport.be/ontology#isPartOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.foodreport.be/ontology#isPartOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.foodreport.be/ontology#isPartOf> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.foodreport.be/ontology#Country> .
+<http://www.foodreport.be/ontology#isPartOf> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.foodreport.be/ontology#Continent> .
+<http://www.foodreport.be/ontology#isPartOf> <http://www.w3.org/2000/01/rdf-schema#comment> "A country is part of exactly one continent and a continent consist of one or more countries."@en .
+<http://www.foodreport.be/ontology#isPartOf> <http://www.w3.org/2000/01/rdf-schema#label> "isPartOf"@en .
+# 
+# http://www.foodreport.be/ontology#isPartOfSameContinent
+<http://www.foodreport.be/ontology#isPartOfSameContinent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.foodreport.be/ontology#isPartOfSameContinent> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.foodreport.be/ontology#Country> .
+<http://www.foodreport.be/ontology#isPartOfSameContinent> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.foodreport.be/ontology#Country> .
+<http://www.foodreport.be/ontology#isPartOfSameContinent> <http://www.w3.org/2000/01/rdf-schema#label> "isPartOfSameContinent"@en .
+# 
+# http://www.foodreport.be/ontology#manufactoredFrom
+<http://www.foodreport.be/ontology#manufactoredFrom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.foodreport.be/ontology#manufactoredFrom> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.foodreport.be/ontology#Ingredient> .
+<http://www.foodreport.be/ontology#manufactoredFrom> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.foodreport.be/ontology#Country> .
+<http://www.foodreport.be/ontology#manufactoredFrom> <http://www.w3.org/2000/01/rdf-schema#comment> "An ingredient is manufactured in one or more countries whereas a country doesn't necessarily manufactures ingredients. However it can also manufacture multiple ingredients."@en .
+<http://www.foodreport.be/ontology#manufactoredFrom> <http://www.w3.org/2000/01/rdf-schema#label> "manufactoredFrom"@en .
+# 
+# http://www.foodreport.be/ontology#needsIngredient
+<http://www.foodreport.be/ontology#needsIngredient> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.foodreport.be/ontology#needsIngredient> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.foodreport.be/ontology#Recipe> .
+<http://www.foodreport.be/ontology#needsIngredient> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.foodreport.be/ontology#Ingredient> .
+<http://www.foodreport.be/ontology#needsIngredient> <http://www.w3.org/2000/01/rdf-schema#comment> "A recipe needs one or multiple ingredients while an ingredient isn't always used in a recipe. Nevertheless it can be needed by multiple different recipes."@en .
+<http://www.foodreport.be/ontology#needsIngredient> <http://www.w3.org/2000/01/rdf-schema#label> "needsIngredient"@en .
+# 
+# http://www.foodreport.be/ontology#ships
+<http://www.foodreport.be/ontology#ships> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.foodreport.be/ontology#ships> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.foodreport.be/ontology#ships> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.foodreport.be/ontology#Trajectory> .
+<http://www.foodreport.be/ontology#ships> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.foodreport.be/ontology#Ingredient> .
+<http://www.foodreport.be/ontology#ships> <http://www.w3.org/2000/01/rdf-schema#comment> "A specific trajectory only ships one ingredient and an ingredient can be shipped using one or multiple trajectories."@en .
+<http://www.foodreport.be/ontology#ships> <http://www.w3.org/2000/01/rdf-schema#label> "ships"@en .
+# 
+# http://www.foodreport.be/ontology#trajectoryFrom
+<http://www.foodreport.be/ontology#trajectoryFrom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.foodreport.be/ontology#trajectoryFrom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.foodreport.be/ontology#trajectoryFrom> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.foodreport.be/ontology#Trajectory> .
+<http://www.foodreport.be/ontology#trajectoryFrom> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.foodreport.be/ontology#Country> .
+<http://www.foodreport.be/ontology#trajectoryFrom> <http://www.w3.org/2000/01/rdf-schema#comment> "A trajectory ships ingredients from exactly one country but a country is not necessarily a part of a trajectory. A country can be part of multiple trajectories."@en .
+<http://www.foodreport.be/ontology#trajectoryFrom> <http://www.w3.org/2000/01/rdf-schema#label> "trajectoryFrom"@en .
+# 
+# http://www.foodreport.be/ontology#trajectoryTo
+<http://www.foodreport.be/ontology#trajectoryTo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.foodreport.be/ontology#trajectoryTo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.foodreport.be/ontology#trajectoryTo> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.foodreport.be/ontology#Trajectory> .
+<http://www.foodreport.be/ontology#trajectoryTo> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.foodreport.be/ontology#Country> .
+<http://www.foodreport.be/ontology#trajectoryTo> <http://www.w3.org/2000/01/rdf-schema#comment> "A trajectory ships ingredients to exactly one country but a country is not necessarily a part of a trajectory. A country can be part of multiple trajectories."@en .
+<http://www.foodreport.be/ontology#trajectoryTo> <http://www.w3.org/2000/01/rdf-schema#label> "trajectoryTo"@en .
+# 
+# http://www.foodreport.be/ontology/alternativeTrajectory
+<http://www.foodreport.be/ontology/alternativeTrajectory> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.foodreport.be/ontology/alternativeTrajectory> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.foodreport.be/ontology#Trajectory> .
+<http://www.foodreport.be/ontology/alternativeTrajectory> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.foodreport.be/ontology#Trajectory> .
+<http://www.foodreport.be/ontology/alternativeTrajectory> <http://www.w3.org/2000/01/rdf-schema#comment> "A trajectory can be an alternative trajectory of one or multiple other trajectories. Alternative trajectories ship the same ingredient from the same origin to the same destination. This object property is automatically inferred using defined rules."@en .
+<http://www.foodreport.be/ontology/alternativeTrajectory> <http://www.w3.org/2000/01/rdf-schema#label> "alternativeTrajectory"@en .
+# 
+# http://www.foodreport.be/ontology/appliesToIngredient
+<http://www.foodreport.be/ontology/appliesToIngredient> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.foodreport.be/ontology/appliesToIngredient> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.foodreport.be/ontology#Law> .
+<http://www.foodreport.be/ontology/appliesToIngredient> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.foodreport.be/ontology#Ingredient> .
+<http://www.foodreport.be/ontology/appliesToIngredient> <http://www.w3.org/2000/01/rdf-schema#comment> "A law applies to one or multiple ingredients whereas a specific ingredient doesn't necessarily have to be involved in a law. It can however be influenced by one or multiple laws."@en .
+<http://www.foodreport.be/ontology/appliesToIngredient> <http://www.w3.org/2000/01/rdf-schema#label> "appliesToIngredient"@en .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Data properties
+# #
+# #################################################################
+# 
+# 
+# http://www.foodreport.be/ontology#calcium
+<http://www.foodreport.be/ontology#calcium> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.foodreport.be/ontology#calcium> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.foodreport.be/ontology#Ingredient> .
+<http://www.foodreport.be/ontology#calcium> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#float> .
+<http://www.foodreport.be/ontology#calcium> <http://www.w3.org/2000/01/rdf-schema#comment> "Calcium is a reactive metal that forms a dark oxide-nitride layer when exposed to air that can be found in food.  The amount will be given in grams per 100 grams of the ingredient (per 100 milliliters if it is present in a liquid)."@en .
+<http://www.foodreport.be/ontology#calcium> <http://www.w3.org/2000/01/rdf-schema#label> "Calcium"@en .
+# 
+# http://www.foodreport.be/ontology#calories
+<http://www.foodreport.be/ontology#calories> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.foodreport.be/ontology#calories> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.foodreport.be/ontology#Ingredient> .
+<http://www.foodreport.be/ontology#calories> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#float> .
+<http://www.foodreport.be/ontology#calories> <http://www.w3.org/2000/01/rdf-schema#comment> "Calories are a unit of energy which can be found in food. The amount will be given in kcal per 100 grams of the ingredient (per 100 milliliters if it is present in a liquid)."@en .
+<http://www.foodreport.be/ontology#calories> <http://www.w3.org/2000/01/rdf-schema#label> "Calories"@en .
+# 
+# http://www.foodreport.be/ontology#carbohydrates
+<http://www.foodreport.be/ontology#carbohydrates> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.foodreport.be/ontology#carbohydrates> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.foodreport.be/ontology#Ingredient> .
+<http://www.foodreport.be/ontology#carbohydrates> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#float> .
+<http://www.foodreport.be/ontology#carbohydrates> <http://www.w3.org/2000/01/rdf-schema#comment> "Carbohydrates are biomolecules consisting of carbon (C), hydrogen (H) and oxygen (O) atoms which can be found in food. The amount will be given in grams per 100 grams of the ingredient (per 100 milliliters if it is present in a liquid)."@en .
+<http://www.foodreport.be/ontology#carbohydrates> <http://www.w3.org/2000/01/rdf-schema#label> "Carbohydrates"@en .
+# 
+# http://www.foodreport.be/ontology#continentName
+<http://www.foodreport.be/ontology#continentName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.foodreport.be/ontology#continentName> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.foodreport.be/ontology#Continent> .
+<http://www.foodreport.be/ontology#continentName> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.foodreport.be/ontology#continentName> <http://www.w3.org/2000/01/rdf-schema#comment> "A ContinentName indicates the (unique) name of a Continent."@en .
+<http://www.foodreport.be/ontology#continentName> <http://www.w3.org/2000/01/rdf-schema#label> "ContinentName"@en .
+# 
+# http://www.foodreport.be/ontology#countryName
+<http://www.foodreport.be/ontology#countryName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.foodreport.be/ontology#countryName> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.foodreport.be/ontology#Country> .
+<http://www.foodreport.be/ontology#countryName> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.foodreport.be/ontology#countryName> <http://www.w3.org/2000/01/rdf-schema#comment> "A CountryName indicates the (unique) name of a Country."@en .
+<http://www.foodreport.be/ontology#countryName> <http://www.w3.org/2000/01/rdf-schema#label> "CountryName"@en .
+# 
+# http://www.foodreport.be/ontology#description
+<http://www.foodreport.be/ontology#description> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.foodreport.be/ontology#description> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.foodreport.be/ontology#Step> .
+<http://www.foodreport.be/ontology#description> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.foodreport.be/ontology#description> <http://www.w3.org/2000/01/rdf-schema#comment> "A Description is the written human-readable text that corresponds with the instructions of a Step"@en .
+<http://www.foodreport.be/ontology#description> <http://www.w3.org/2000/01/rdf-schema#label> "Description"@en .
+# 
+# http://www.foodreport.be/ontology#distance
+<http://www.foodreport.be/ontology#distance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.foodreport.be/ontology#distance> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.foodreport.be/ontology#Trajectory> .
+<http://www.foodreport.be/ontology#distance> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#float> .
+<http://www.foodreport.be/ontology#distance> <http://www.w3.org/2000/01/rdf-schema#comment> "A distance is a numerical indicator of the distance a trajectory covers. This is not the straight line distance between the origin and destination, but the actual distance the trajectory covers."@en .
+<http://www.foodreport.be/ontology#distance> <http://www.w3.org/2000/01/rdf-schema#label> "Distance"@en .
+# 
+# http://www.foodreport.be/ontology#environmentScore
+<http://www.foodreport.be/ontology#environmentScore> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.foodreport.be/ontology#environmentScore> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.foodreport.be/ontology#Law> .
+<http://www.foodreport.be/ontology#environmentScore> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#float> .
+<http://www.foodreport.be/ontology#environmentScore> <http://www.w3.org/2000/01/rdf-schema#comment> "An EnvironmentScore is a numerical indicator on a scale of 0 to 100, with 0 being worst and 100 being best, of the environmental impact of this law."@en .
+<http://www.foodreport.be/ontology#environmentScore> <http://www.w3.org/2000/01/rdf-schema#label> "EnvironmentScore"@en .
+# 
+# http://www.foodreport.be/ontology#fat
+<http://www.foodreport.be/ontology#fat> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.foodreport.be/ontology#fat> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.foodreport.be/ontology#Ingredient> .
+<http://www.foodreport.be/ontology#fat> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#float> .
+<http://www.foodreport.be/ontology#fat> <http://www.w3.org/2000/01/rdf-schema#comment> "Fat: Fat is the sum of saturated, monounsaturated and polyunsaturated fats which can be found in food. The amount will be given in grams per 100 grams of the ingredient (per 100 milliliters if it is present in a liquid)."@en .
+<http://www.foodreport.be/ontology#fat> <http://www.w3.org/2000/01/rdf-schema#label> "Fat"@en .
+# 
+# http://www.foodreport.be/ontology#foodTypeName
+<http://www.foodreport.be/ontology#foodTypeName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.foodreport.be/ontology#foodTypeName> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.foodreport.be/ontology#FoodType> .
+<http://www.foodreport.be/ontology#foodTypeName> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.foodreport.be/ontology#foodTypeName> <http://www.w3.org/2000/01/rdf-schema#comment> "A FoodTypeName indicates the (unique) name of a FoodType."@en .
+<http://www.foodreport.be/ontology#foodTypeName> <http://www.w3.org/2000/01/rdf-schema#label> "FoodTypeName"@en .
+# 
+# http://www.foodreport.be/ontology#ingredientName
+<http://www.foodreport.be/ontology#ingredientName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.foodreport.be/ontology#ingredientName> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.foodreport.be/ontology#Ingredient> .
+<http://www.foodreport.be/ontology#ingredientName> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.foodreport.be/ontology#ingredientName> <http://www.w3.org/2000/01/rdf-schema#comment> "A IngredientName indicates the (unique) name of a Ingredient."@en .
+<http://www.foodreport.be/ontology#ingredientName> <http://www.w3.org/2000/01/rdf-schema#label> "IngredientName"@en .
+# 
+# http://www.foodreport.be/ontology#labourScore
+<http://www.foodreport.be/ontology#labourScore> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.foodreport.be/ontology#labourScore> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.foodreport.be/ontology#Law> .
+<http://www.foodreport.be/ontology#labourScore> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#float> .
+<http://www.foodreport.be/ontology#labourScore> <http://www.w3.org/2000/01/rdf-schema#comment> "A LabourScore is a numerical indicator on a scale of 0 to 100, with 0 being worst and 100 being best, of the impact on labour of this law."@en .
+<http://www.foodreport.be/ontology#labourScore> <http://www.w3.org/2000/01/rdf-schema#label> "LabourScore"@en .
+# 
+# http://www.foodreport.be/ontology#lawName
+<http://www.foodreport.be/ontology#lawName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.foodreport.be/ontology#lawName> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.foodreport.be/ontology#Law> .
+<http://www.foodreport.be/ontology#lawName> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.foodreport.be/ontology#lawName> <http://www.w3.org/2000/01/rdf-schema#comment> "A LawName indicates the (unique) name of a Law."@en .
+<http://www.foodreport.be/ontology#lawName> <http://www.w3.org/2000/01/rdf-schema#label> "LawName"@en .
+# 
+# http://www.foodreport.be/ontology#orderNumber
+<http://www.foodreport.be/ontology#orderNumber> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.foodreport.be/ontology#orderNumber> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.foodreport.be/ontology#Step> .
+<http://www.foodreport.be/ontology#orderNumber> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#int> .
+<http://www.foodreport.be/ontology#orderNumber> <http://www.w3.org/2000/01/rdf-schema#comment> "An OrderNumber is the relative place of occurrence of a step in a Recipe."@en .
+<http://www.foodreport.be/ontology#orderNumber> <http://www.w3.org/2000/01/rdf-schema#label> "OrderNumber"@en .
+# 
+# http://www.foodreport.be/ontology#proteins
+<http://www.foodreport.be/ontology#proteins> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.foodreport.be/ontology#proteins> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.foodreport.be/ontology#Ingredient> .
+<http://www.foodreport.be/ontology#proteins> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#float> .
+<http://www.foodreport.be/ontology#proteins> <http://www.w3.org/2000/01/rdf-schema#comment> "Proteins are large biomolecules consisting of one or more long chains of amino acid residues which can be found in food. The amount will be given in grams per 100 grams of the ingredient (per 100 milliliters if it is present in a liquid)."@en .
+<http://www.foodreport.be/ontology#proteins> <http://www.w3.org/2000/01/rdf-schema#label> "Proteins"@en .
+# 
+# http://www.foodreport.be/ontology#recipeName
+<http://www.foodreport.be/ontology#recipeName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.foodreport.be/ontology#recipeName> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.foodreport.be/ontology#Recipe> .
+<http://www.foodreport.be/ontology#recipeName> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.foodreport.be/ontology#recipeName> <http://www.w3.org/2000/01/rdf-schema#comment> "A RecipeName indicates the (unique) name of a Recipe."@en .
+<http://www.foodreport.be/ontology#recipeName> <http://www.w3.org/2000/01/rdf-schema#label> "RecipeName"@en .
+# 
+# http://www.foodreport.be/ontology#sodium
+<http://www.foodreport.be/ontology#sodium> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.foodreport.be/ontology#sodium> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.foodreport.be/ontology#Ingredient> .
+<http://www.foodreport.be/ontology#sodium> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#float> .
+<http://www.foodreport.be/ontology#sodium> <http://www.w3.org/2000/01/rdf-schema#comment> "Sodium is a soft, silvery-white, highly reactive metal which can be found in food. The amount will be given in grams per 100 grams of the ingredient (per 100 milliliters if it is present in a liquid)."@en .
+<http://www.foodreport.be/ontology#sodium> <http://www.w3.org/2000/01/rdf-schema#label> "Sodium"@en .
+# 
+# http://www.foodreport.be/ontology#sugar
+<http://www.foodreport.be/ontology#sugar> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.foodreport.be/ontology#sugar> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.foodreport.be/ontology#Ingredient> .
+<http://www.foodreport.be/ontology#sugar> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#float> .
+<http://www.foodreport.be/ontology#sugar> <http://www.w3.org/2000/01/rdf-schema#comment> "Sugar is the generic name for sweet-tasting, soluble carbohydrates, which can be found in food. The amount will be given in grams per 100 grams of the ingredient (per 100 milliliters if it is present in a liquid)."@en .
+<http://www.foodreport.be/ontology#sugar> <http://www.w3.org/2000/01/rdf-schema#label> "Sugar"@en .
+# 
+# http://www.foodreport.be/ontology#text
+<http://www.foodreport.be/ontology#text> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.foodreport.be/ontology#text> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.foodreport.be/ontology#Law> .
+<http://www.foodreport.be/ontology#text> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.foodreport.be/ontology#text> <http://www.w3.org/2000/01/rdf-schema#comment> "A Text is the law text that corresponds with a Law."@en .
+<http://www.foodreport.be/ontology#text> <http://www.w3.org/2000/01/rdf-schema#label> "Text"@en .
+# 
+# http://www.foodreport.be/ontology#trajectoryName
+<http://www.foodreport.be/ontology#trajectoryName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.foodreport.be/ontology#trajectoryName> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.foodreport.be/ontology#Trajectory> .
+<http://www.foodreport.be/ontology#trajectoryName> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.foodreport.be/ontology#trajectoryName> <http://www.w3.org/2000/01/rdf-schema#comment> "A TrajectoryName indicates the (unique) name of a Trajectory."@en .
+<http://www.foodreport.be/ontology#trajectoryName> <http://www.w3.org/2000/01/rdf-schema#label> "TrajectoryName"@en .
+# 
+# http://www.foodreport.be/ontology#trajectoryScore
+<http://www.foodreport.be/ontology#trajectoryScore> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.foodreport.be/ontology#trajectoryScore> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.foodreport.be/ontology#Trajectory> .
+<http://www.foodreport.be/ontology#trajectoryScore> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#float> .
+<http://www.foodreport.be/ontology#trajectoryScore> <http://www.w3.org/2000/01/rdf-schema#comment> "A TrajectoryScore is a numerical indicator on a scale of 0 to 100, with 0 being worst and 100 being best, of the environmental impact of this transport."@en .
+<http://www.foodreport.be/ontology#trajectoryScore> <http://www.w3.org/2000/01/rdf-schema#label> "TrajectoryScore"@en .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# http://www.foodreport.be/ontology#Continent
+<http://www.foodreport.be/ontology#Continent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.foodreport.be/ontology#Continent> <http://www.w3.org/2000/01/rdf-schema#comment> "A Continent is any of the world's main continuous expanses of land."@en .
+<http://www.foodreport.be/ontology#Continent> <http://www.w3.org/2000/01/rdf-schema#label> "Continent"@en .
+# 
+# http://www.foodreport.be/ontology#Country
+<http://www.foodreport.be/ontology#Country> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.foodreport.be/ontology#Country> <http://www.w3.org/2000/01/rdf-schema#comment> "A Country is a nation with its own government, occupying a particular territory."@en .
+<http://www.foodreport.be/ontology#Country> <http://www.w3.org/2000/01/rdf-schema#label> "Country"@en .
+# 
+# http://www.foodreport.be/ontology#FoodType
+<http://www.foodreport.be/ontology#FoodType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.foodreport.be/ontology#FoodType> <http://www.w3.org/2000/01/rdf-schema#comment> "A FoodType is a group of related ingredients."@en .
+<http://www.foodreport.be/ontology#FoodType> <http://www.w3.org/2000/01/rdf-schema#label> "FoodType"@en .
+# 
+# http://www.foodreport.be/ontology#Ingredient
+<http://www.foodreport.be/ontology#Ingredient> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.foodreport.be/ontology#Ingredient> <http://www.w3.org/2000/01/rdf-schema#comment> "An ingredient is a specific piece of food required to prepare recipies."@en .
+<http://www.foodreport.be/ontology#Ingredient> <http://www.w3.org/2000/01/rdf-schema#label> "Ingredient"@en .
+# 
+# http://www.foodreport.be/ontology#Law
+<http://www.foodreport.be/ontology#Law> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.foodreport.be/ontology#Law> <http://www.w3.org/2000/01/rdf-schema#comment> "A Law is a rule that is created and enforced through social or governmental institutions to regulate behavior."@en .
+<http://www.foodreport.be/ontology#Law> <http://www.w3.org/2000/01/rdf-schema#label> "Law"@en .
+# 
+# http://www.foodreport.be/ontology#Recipe
+<http://www.foodreport.be/ontology#Recipe> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.foodreport.be/ontology#Recipe> <http://www.w3.org/2000/01/rdf-schema#comment> "A Recipe is a set of instructions that describe how to prepare or make a meal, requiring certain ingredients."@en .
+<http://www.foodreport.be/ontology#Recipe> <http://www.w3.org/2000/01/rdf-schema#label> "Recipe"@en .
+# 
+# http://www.foodreport.be/ontology#Step
+<http://www.foodreport.be/ontology#Step> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.foodreport.be/ontology#Step> <http://www.w3.org/2000/01/rdf-schema#comment> "A Step is a specific instruction in the preparation of a recipe."@en .
+<http://www.foodreport.be/ontology#Step> <http://www.w3.org/2000/01/rdf-schema#label> "Step"@en .
+# 
+# http://www.foodreport.be/ontology#Trajectory
+<http://www.foodreport.be/ontology#Trajectory> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.foodreport.be/ontology#Trajectory> <http://www.w3.org/2000/01/rdf-schema#comment> "A Trajectory runs from one country to another, transporting a certain ingredient. It does may or may not encapsulate the use of multiple types of transport."@en .
+<http://www.foodreport.be/ontology#Trajectory> <http://www.w3.org/2000/01/rdf-schema#label> "Trajectory"@en .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Rules
+# #
+# #################################################################
+# 
+# 
+<urn:swrl:var#l> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#Variable> .
+<urn:swrl:var#t> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#Variable> .
+<urn:swrl:var#c> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#Variable> .
+<urn:swrl:var#i> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#Variable> .
+<urn:swrl:var#p1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#Variable> .
+<urn:swrl:var#p2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#Variable> .
+<urn:swrl:var#n1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#Variable> .
+<urn:swrl:var#n2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#Variable> .
+<urn:swrl:var#t1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#Variable> .
+<urn:swrl:var#cf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#Variable> .
+<urn:swrl:var#ct> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#Variable> .
+<urn:swrl:var#t2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#Variable> .
+_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#Imp> .
+_:genid1 <http://www.w3.org/2003/11/swrl#body> _:genid8 .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid9 .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> .
+_:genid9 <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://www.foodreport.be/ontology#appliesToFoodType> .
+_:genid9 <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#l> .
+_:genid9 <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl:var#t> .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid6 .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid7 .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> .
+_:genid7 <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://www.foodreport.be/ontology#imposes> .
+_:genid7 <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#c> .
+_:genid7 <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl:var#l> .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid4 .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid5 .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> .
+_:genid5 <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://www.foodreport.be/ontology#hasFoodType> .
+_:genid5 <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#i> .
+_:genid5 <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl:var#t> .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid2 .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid3 .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> .
+_:genid3 <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://www.foodreport.be/ontology#manufactoredFrom> .
+_:genid3 <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#i> .
+_:genid3 <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl:var#c> .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid1 <http://www.w3.org/2003/11/swrl#head> _:genid10 .
+_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid11 .
+_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> .
+_:genid11 <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://www.foodreport.be/ontology/appliesToIngredient> .
+_:genid11 <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#l> .
+_:genid11 <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl:var#i> .
+_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#Imp> .
+_:genid12 <http://www.w3.org/2003/11/swrl#body> _:genid23 .
+_:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid24 .
+_:genid24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> .
+_:genid24 <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://www.foodreport.be/ontology#isPartOf> .
+_:genid24 <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#p1> .
+_:genid24 <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl:var#c> .
+_:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid21 .
+_:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid22 .
+_:genid22 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> .
+_:genid22 <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://www.foodreport.be/ontology#isPartOf> .
+_:genid22 <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#p2> .
+_:genid22 <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl:var#c> .
+_:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid19 .
+_:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid20 .
+_:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> .
+_:genid20 <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://www.foodreport.be/ontology#countryName> .
+_:genid20 <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#p1> .
+_:genid20 <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl:var#n1> .
+_:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid17 .
+_:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid18 .
+_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> .
+_:genid18 <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://www.foodreport.be/ontology#countryName> .
+_:genid18 <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#p2> .
+_:genid18 <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl:var#n2> .
+_:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid13 .
+_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid2147483709 .
+_:genid2147483709 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#BuiltinAtom> .
+_:genid2147483709 <http://www.w3.org/2003/11/swrl#builtin> <http://www.w3.org/2003/11/swrlb#notEqual> .
+<http://www.w3.org/2003/11/swrlb#notEqual> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#Builtin> .
+_:genid2147483709 <http://www.w3.org/2003/11/swrl#arguments> _:genid16 .
+_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <urn:swrl:var#n1> .
+_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid15 .
+_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <urn:swrl:var#n2> .
+_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid12 <http://www.w3.org/2003/11/swrl#head> _:genid25 .
+_:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid26 .
+_:genid26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> .
+_:genid26 <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://www.foodreport.be/ontology#isPartOfSameContinent> .
+_:genid26 <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#p1> .
+_:genid26 <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl:var#p2> .
+_:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#Imp> .
+_:genid27 <http://www.w3.org/2003/11/swrl#body> _:genid43 .
+_:genid43 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid43 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid44 .
+_:genid44 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> .
+_:genid44 <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://www.foodreport.be/ontology#trajectoryFrom> .
+_:genid44 <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#t1> .
+_:genid44 <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl:var#cf> .
+_:genid43 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid41 .
+_:genid41 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid41 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid42 .
+_:genid42 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> .
+_:genid42 <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://www.foodreport.be/ontology#trajectoryTo> .
+_:genid42 <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#t1> .
+_:genid42 <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl:var#ct> .
+_:genid41 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid39 .
+_:genid39 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid39 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid40 .
+_:genid40 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> .
+_:genid40 <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://www.foodreport.be/ontology#ships> .
+_:genid40 <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#t1> .
+_:genid40 <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl:var#i> .
+_:genid39 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid37 .
+_:genid37 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid37 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid38 .
+_:genid38 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> .
+_:genid38 <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://www.foodreport.be/ontology#trajectoryFrom> .
+_:genid38 <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#t2> .
+_:genid38 <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl:var#cf> .
+_:genid37 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid35 .
+_:genid35 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid35 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid36 .
+_:genid36 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> .
+_:genid36 <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://www.foodreport.be/ontology#trajectoryTo> .
+_:genid36 <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#t2> .
+_:genid36 <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl:var#ct> .
+_:genid35 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid33 .
+_:genid33 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid33 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid34 .
+_:genid34 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> .
+_:genid34 <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://www.foodreport.be/ontology#ships> .
+_:genid34 <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#t2> .
+_:genid34 <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl:var#i> .
+_:genid33 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid31 .
+_:genid31 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid31 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid32 .
+_:genid32 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> .
+_:genid32 <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://www.foodreport.be/ontology#trajectoryName> .
+_:genid32 <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#t1> .
+_:genid32 <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl:var#n1> .
+_:genid31 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid29 .
+_:genid29 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid29 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid30 .
+_:genid30 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> .
+_:genid30 <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://www.foodreport.be/ontology#trajectoryName> .
+_:genid30 <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#t2> .
+_:genid30 <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl:var#n2> .
+_:genid29 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid28 .
+_:genid28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid2147483710 .
+_:genid2147483710 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#BuiltinAtom> .
+_:genid2147483710 <http://www.w3.org/2003/11/swrl#builtin> <http://www.w3.org/2003/11/swrlb#notEqual> .
+_:genid2147483710 <http://www.w3.org/2003/11/swrl#arguments> _:genid16 .
+_:genid28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid27 <http://www.w3.org/2003/11/swrl#head> _:genid45 .
+_:genid45 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid45 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid46 .
+_:genid46 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> .
+_:genid46 <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://www.foodreport.be/ontology/alternativeTrajectory> .
+_:genid46 <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#t1> .
+_:genid46 <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl:var#t2> .
+_:genid45 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+# Generated by the OWL API (version 5.1.9) https://github.com/owlcs/owlapi/

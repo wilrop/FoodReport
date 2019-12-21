@@ -1,0 +1,242 @@
+<http://www.foodreport.be/data#Capellini>
+        a       <http://www.foodreport.be/ontology#Ingredient> ;
+        <http://www.foodreport.be/ontology#calcium>
+                "0.0"^^<http://www.w3.org/2001/XMLSchema#double> ;
+        <http://www.foodreport.be/ontology#calories>
+                "357.0"^^<http://www.w3.org/2001/XMLSchema#double> ;
+        <http://www.foodreport.be/ontology#carbohydrates>
+                "78.6"^^<http://www.w3.org/2001/XMLSchema#double> ;
+        <http://www.foodreport.be/ontology#fat>
+                "1.8"^^<http://www.w3.org/2001/XMLSchema#double> ;
+        <http://www.foodreport.be/ontology#hasFoodType>
+                <http://www.foodreport.be/data#Pastas> ;
+        <http://www.foodreport.be/ontology#ingredientName>
+                "Capellini" ;
+        <http://www.foodreport.be/ontology#proteins>
+                "12.5"^^<http://www.w3.org/2001/XMLSchema#double> ;
+        <http://www.foodreport.be/ontology#sodium>
+                "0.0"^^<http://www.w3.org/2001/XMLSchema#double> ;
+        <http://www.foodreport.be/ontology#sugar>
+                "1.8"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+<http://www.foodreport.be/data#80%20hour%20work%20week>
+        a       <http://www.foodreport.be/ontology#Law> ;
+        <http://www.foodreport.be/ontology#appliesToFoodType>
+                <http://www.foodreport.be/data#Pastas> , <http://www.foodreport.be/data#Oils> , <http://www.foodreport.be/data#Fruits> ;
+        <http://www.foodreport.be/ontology#labourScore>
+                "12.0"^^<http://www.w3.org/2001/XMLSchema#double> ;
+        <http://www.foodreport.be/ontology#lawName>
+                "80 hour work week" ;
+        <http://www.foodreport.be/ontology#lawText>
+                "All workmen have to work at least 80 hours a week." .
+
+<http://www.foodreport.be/data#Tomato%20Soup>
+        a       <http://www.foodreport.be/ontology#Recipe> ;
+        <http://www.foodreport.be/ontology#needsIngredient>
+                <http://www.foodreport.be/data#Tomato> ;
+        <http://www.foodreport.be/ontology#recipeName>
+                "Tomato Soup" .
+
+<http://www.foodreport.be/data#trajectory18-Mexico-Italy>
+        a       <http://www.foodreport.be/ontology#Trajectory> ;
+        <http://www.foodreport.be/ontology#distance>
+                "1997.0"^^<http://www.w3.org/2001/XMLSchema#double> ;
+        <http://www.foodreport.be/ontology#ships>
+                <http://www.foodreport.be/data#Tomato> ;
+        <http://www.foodreport.be/ontology#trajectoryFrom>
+                <http://www.foodreport.be/data#Mexico> ;
+        <http://www.foodreport.be/ontology#trajectoryName>
+                "trajectory18" ;
+        <http://www.foodreport.be/ontology#trajectoryScore>
+                "30.0"^^<http://www.w3.org/2001/XMLSchema#double> ;
+        <http://www.foodreport.be/ontology#trajectoryTo>
+                <http://www.foodreport.be/data#Italy> .
+
+<http://www.foodreport.be/data#France>
+        a       <http://www.foodreport.be/ontology#Country> ;
+        <http://www.foodreport.be/ontology#countryName>
+                "France" ;
+        <http://www.foodreport.be/ontology#imposes>
+                <http://www.foodreport.be/data#80%20hour%20work%20week> ;
+        <http://www.foodreport.be/ontology#isPartOf>
+                <http://www.foodreport.be/data#Europe> .
+
+<http://www.foodreport.be/data#Fruits>
+        a       <http://www.foodreport.be/ontology#FoodType> ;
+        <http://www.foodreport.be/ontology#foodTypeName>
+                "Fruits" .
+
+<http://www.foodreport.be/data#Oils>
+        a       <http://www.foodreport.be/ontology#FoodType> ;
+        <http://www.foodreport.be/ontology#foodTypeName>
+                "Oils" .
+
+<http://www.foodreport.be/data#Spaghetti%20Bolognese-2>
+        a       <http://www.foodreport.be/ontology#Step> ;
+        <http://www.foodreport.be/ontology#describesRecipe>
+                <http://www.foodreport.be/data#Spaghetti%20Bolognese> ;
+        <http://www.foodreport.be/ontology#description>
+                "Add 4 finely chopped bacon rashers and fry for 10 mins until golden and crisp." ;
+        <http://www.foodreport.be/ontology#orderNumber>
+                "2"^^<http://www.w3.org/2001/XMLSchema#int> .
+
+<http://www.foodreport.be/data#Tomato%20Soup-3>
+        a       <http://www.foodreport.be/ontology#Step> ;
+        <http://www.foodreport.be/ontology#describesRecipe>
+                <http://www.foodreport.be/data#Tomato%20Soup> ;
+        <http://www.foodreport.be/ontology#description>
+                "Add tomatoes to the bowl." ;
+        <http://www.foodreport.be/ontology#orderNumber>
+                "3"^^<http://www.w3.org/2001/XMLSchema#int> .
+
+<http://www.foodreport.be/data#trajectory18-France-Italy>
+        a       <http://www.foodreport.be/ontology#Trajectory> ;
+        <http://www.foodreport.be/ontology#distance>
+                "580.0"^^<http://www.w3.org/2001/XMLSchema#double> ;
+        <http://www.foodreport.be/ontology#ships>
+                <http://www.foodreport.be/data#Tomato> ;
+        <http://www.foodreport.be/ontology#trajectoryFrom>
+                <http://www.foodreport.be/data#France> ;
+        <http://www.foodreport.be/ontology#trajectoryName>
+                "trajectory18" ;
+        <http://www.foodreport.be/ontology#trajectoryScore>
+                "42.0"^^<http://www.w3.org/2001/XMLSchema#double> ;
+        <http://www.foodreport.be/ontology#trajectoryTo>
+                <http://www.foodreport.be/data#Italy> .
+
+<http://www.foodreport.be/data#Spaghetti%20Bolognese-1>
+        a       <http://www.foodreport.be/ontology#Step> ;
+        <http://www.foodreport.be/ontology#describesRecipe>
+                <http://www.foodreport.be/data#Spaghetti%20Bolognese> ;
+        <http://www.foodreport.be/ontology#description>
+                "Put a large saucepan on a medium heat and add 1 tbsp olive oil." ;
+        <http://www.foodreport.be/ontology#orderNumber>
+                "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+
+<http://www.foodreport.be/data#Pesticide%20restriction%20K-58>
+        a       <http://www.foodreport.be/ontology#Law> ;
+        <http://www.foodreport.be/ontology#appliesToFoodType>
+                <http://www.foodreport.be/data#Fruits> ;
+        <http://www.foodreport.be/ontology#environmentScore>
+                "85.0"^^<http://www.w3.org/2001/XMLSchema#double> ;
+        <http://www.foodreport.be/ontology#lawName>
+                "Pesticide restriction K-58" ;
+        <http://www.foodreport.be/ontology#lawText>
+                "Pesticides with dangerous chemicals are not allowed." .
+
+<http://www.foodreport.be/data#Tomato%20Soup-2>
+        a       <http://www.foodreport.be/ontology#Step> ;
+        <http://www.foodreport.be/ontology#describesRecipe>
+                <http://www.foodreport.be/data#Tomato%20Soup> ;
+        <http://www.foodreport.be/ontology#description>
+                "Fill a pot with (hot) water and boil it to about 100 degrees celcius." ;
+        <http://www.foodreport.be/ontology#orderNumber>
+                "2"^^<http://www.w3.org/2001/XMLSchema#int> .
+
+<http://www.foodreport.be/data#Europe>
+        a       <http://www.foodreport.be/ontology#Continent> ;
+        <http://www.foodreport.be/ontology#continentName>
+                "Europe" .
+
+<http://www.foodreport.be/data#Tomato>
+        a       <http://www.foodreport.be/ontology#Ingredient> ;
+        <http://www.foodreport.be/ontology#calcium>
+                "18.0"^^<http://www.w3.org/2001/XMLSchema#double> ;
+        <http://www.foodreport.be/ontology#calories>
+                "32.0"^^<http://www.w3.org/2001/XMLSchema#double> ;
+        <http://www.foodreport.be/ontology#carbohydrates>
+                "5.8"^^<http://www.w3.org/2001/XMLSchema#double> ;
+        <http://www.foodreport.be/ontology#fat>
+                "0.3"^^<http://www.w3.org/2001/XMLSchema#double> ;
+        <http://www.foodreport.be/ontology#hasFoodType>
+                <http://www.foodreport.be/data#Fruits> ;
+        <http://www.foodreport.be/ontology#ingredientName>
+                "Tomato" ;
+        <http://www.foodreport.be/ontology#manufacturedFrom>
+                <http://www.foodreport.be/data#Mexico> , <http://www.foodreport.be/data#France> ;
+        <http://www.foodreport.be/ontology#proteins>
+                "1.3"^^<http://www.w3.org/2001/XMLSchema#double> ;
+        <http://www.foodreport.be/ontology#sodium>
+                "7.5"^^<http://www.w3.org/2001/XMLSchema#double> ;
+        <http://www.foodreport.be/ontology#sugar>
+                "3.9"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+<http://www.foodreport.be/data#Tomato%20Soup-1>
+        a       <http://www.foodreport.be/ontology#Step> ;
+        <http://www.foodreport.be/ontology#describesRecipe>
+                <http://www.foodreport.be/data#Tomato%20Soup> ;
+        <http://www.foodreport.be/ontology#description>
+                "Cut 5 tomatoes in small pieces." ;
+        <http://www.foodreport.be/ontology#orderNumber>
+                "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+
+<http://www.foodreport.be/data#Italy>
+        a       <http://www.foodreport.be/ontology#Country> ;
+        <http://www.foodreport.be/ontology#countryName>
+                "Italy" ;
+        <http://www.foodreport.be/ontology#isPartOf>
+                <http://www.foodreport.be/data#Europe> .
+
+<http://www.foodreport.be/data#trajectory83-France-Italy>
+        a       <http://www.foodreport.be/ontology#Trajectory> ;
+        <http://www.foodreport.be/ontology#distance>
+                "555.0"^^<http://www.w3.org/2001/XMLSchema#double> ;
+        <http://www.foodreport.be/ontology#ships>
+                <http://www.foodreport.be/data#Tomato> ;
+        <http://www.foodreport.be/ontology#trajectoryFrom>
+                <http://www.foodreport.be/data#France> ;
+        <http://www.foodreport.be/ontology#trajectoryName>
+                "trajectory83" ;
+        <http://www.foodreport.be/ontology#trajectoryScore>
+                "44.0"^^<http://www.w3.org/2001/XMLSchema#double> ;
+        <http://www.foodreport.be/ontology#trajectoryTo>
+                <http://www.foodreport.be/data#Italy> .
+
+<http://www.foodreport.be/data#North%20America>
+        a       <http://www.foodreport.be/ontology#Continent> ;
+        <http://www.foodreport.be/ontology#continentName>
+                "North America" .
+
+<http://www.foodreport.be/data#Olive%20Oil>
+        a       <http://www.foodreport.be/ontology#Ingredient> ;
+        <http://www.foodreport.be/ontology#calcium>
+                "1.0"^^<http://www.w3.org/2001/XMLSchema#double> ;
+        <http://www.foodreport.be/ontology#calories>
+                "884.0"^^<http://www.w3.org/2001/XMLSchema#double> ;
+        <http://www.foodreport.be/ontology#carbohydrates>
+                "0.0"^^<http://www.w3.org/2001/XMLSchema#double> ;
+        <http://www.foodreport.be/ontology#fat>
+                "0.0"^^<http://www.w3.org/2001/XMLSchema#double> ;
+        <http://www.foodreport.be/ontology#hasFoodType>
+                <http://www.foodreport.be/data#Oils> ;
+        <http://www.foodreport.be/ontology#ingredientName>
+                "Olive Oil" ;
+        <http://www.foodreport.be/ontology#manufacturedFrom>
+                <http://www.foodreport.be/data#Italy> ;
+        <http://www.foodreport.be/ontology#proteins>
+                "100.0"^^<http://www.w3.org/2001/XMLSchema#double> ;
+        <http://www.foodreport.be/ontology#sodium>
+                "2.0"^^<http://www.w3.org/2001/XMLSchema#double> ;
+        <http://www.foodreport.be/ontology#sugar>
+                "0.0"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+<http://www.foodreport.be/data#Mexico>
+        a       <http://www.foodreport.be/ontology#Country> ;
+        <http://www.foodreport.be/ontology#countryName>
+                "Mexico" ;
+        <http://www.foodreport.be/ontology#imposes>
+                <http://www.foodreport.be/data#80%20hour%20work%20week> ;
+        <http://www.foodreport.be/ontology#isPartOf>
+                <http://www.foodreport.be/data#North%20America> .
+
+<http://www.foodreport.be/data#Pastas>
+        a       <http://www.foodreport.be/ontology#FoodType> ;
+        <http://www.foodreport.be/ontology#foodTypeName>
+                "Pastas" .
+
+<http://www.foodreport.be/data#Spaghetti%20Bolognese>
+        a       <http://www.foodreport.be/ontology#Recipe> ;
+        <http://www.foodreport.be/ontology#needsIngredient>
+                <http://www.foodreport.be/data#Olive%20Oil> , <http://www.foodreport.be/data#Capellini> , <http://www.foodreport.be/data#Tomato> ;
+        <http://www.foodreport.be/ontology#recipeName>
+                "Spaghetti Bolognese" .
