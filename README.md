@@ -32,3 +32,12 @@ WHERE {
   ?ingredient ontology:manufacturedFrom data:France
 }
 ```
+```sql
+PREFIX ontology: http://www.foodreport.be/ontology#
+PREFIX data: http://www.foodreport.be/data#
+
+SELECT ?step
+WHERE {
+  ?step ontology:describesRecipe data:Spaghetti%20Bolognese
+} ORDER BY ASC(?step)
+```
