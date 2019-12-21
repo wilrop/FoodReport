@@ -50,6 +50,9 @@ WHERE {
 This query will give the overall labour and environment score given from the country France and the ingredient tomato.
 
 ```sql
+PREFIX ontology: http://www.foodreport.be/ontology#
+PREFIX data: http://www.foodreport.be/data#
+
 SELECT (AVG (?labourScore) AS ?averageLabourScore)
        (AVG (?environmentScore) AS ?averageEnvironmentalScore)
 WHERE {
