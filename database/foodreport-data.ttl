@@ -40,6 +40,8 @@
         a       <http://www.foodreport.be/ontology#Law> ;
         <http://www.foodreport.be/ontology#appliesToFoodType>
                 <http://www.foodreport.be/data#Pastas> , <http://www.foodreport.be/data#Oils> , <http://www.foodreport.be/data#Fruits> ;
+        <http://www.foodreport.be/ontology#environmentScore>
+                "50.0"^^<http://www.w3.org/2001/XMLSchema#double> ;
         <http://www.foodreport.be/ontology#labourScore>
                 "12.0"^^<http://www.w3.org/2001/XMLSchema#double> ;
         <http://www.foodreport.be/ontology#lawName>
@@ -87,6 +89,8 @@
         a       <http://www.foodreport.be/ontology#Law> ;
         <http://www.foodreport.be/ontology#environmentScore>
                 "90.0"^^<http://www.w3.org/2001/XMLSchema#double> ;
+        <http://www.foodreport.be/ontology#labourScore>
+                "50.0"^^<http://www.w3.org/2001/XMLSchema#double> ;
         <http://www.foodreport.be/ontology#lawName>
                 "Overfishing protection" ;
         <http://www.foodreport.be/ontology#lawText>
@@ -96,6 +100,8 @@
         a       <http://www.foodreport.be/ontology#Law> ;
         <http://www.foodreport.be/ontology#appliesToFoodType>
                 <http://www.foodreport.be/data#Fruits> , <http://www.foodreport.be/data#Oils> , <http://www.foodreport.be/data#Pastas> ;
+        <http://www.foodreport.be/ontology#environmentScore>
+                "50.0"^^<http://www.w3.org/2001/XMLSchema#double> ;
         <http://www.foodreport.be/ontology#labourScore>
                 "70.0"^^<http://www.w3.org/2001/XMLSchema#double> ;
         <http://www.foodreport.be/ontology#lawName>
@@ -186,6 +192,8 @@
                 <http://www.foodreport.be/data#Fruits> ;
         <http://www.foodreport.be/ontology#environmentScore>
                 "85.0"^^<http://www.w3.org/2001/XMLSchema#double> ;
+        <http://www.foodreport.be/ontology#labourScore>
+                "50.0"^^<http://www.w3.org/2001/XMLSchema#double> ;
         <http://www.foodreport.be/ontology#lawName>
                 "Pesticide restriction K-58" ;
         <http://www.foodreport.be/ontology#lawText>

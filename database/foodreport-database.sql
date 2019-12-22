@@ -58,8 +58,8 @@ CREATE TABLE Law
 (
   lawName TEXT NOT NULL,
   lawText TEXT NOT NULL,
-  labourScore FLOAT, 
-  environmentScore FLOAT,
+  labourScore FLOAT NOT NULL, 
+  environmentScore FLOAT NOT NULL,
   PRIMARY KEY (lawName)
 );
 
@@ -151,10 +151,10 @@ INSERT INTO "ManufacturedFrom" VALUES ('Olive Oil', 'Italy');
 INSERT INTO "ManufacturedFrom" VALUES ('Olive Oil', 'Mexico');
 INSERT INTO "ManufacturedFrom" VALUES ('Capellini', 'France');
 
-INSERT INTO "Law" VALUES ('Pesticide restriction K-58', 'Pesticides with dangerous chemicals are not allowed.', NULL, 85.0);
-INSERT INTO "Law" VALUES ('Overfishing protection', 'There are restrictions on fishing.', NULL, 90.0);
-INSERT INTO "Law" VALUES ('80 hour work week', "All workmen have to work at least 80 hours a week.", 12.0, NULL);
-INSERT INTO "Law" VALUES ('Minimum wage', "People make a minimum wage.", 70.0, NULL);
+INSERT INTO "Law" VALUES ('Pesticide restriction K-58', 'Pesticides with dangerous chemicals are not allowed.', 50.0, 85.0);
+INSERT INTO "Law" VALUES ('Overfishing protection', 'There are restrictions on fishing.', 50.0, 90.0);
+INSERT INTO "Law" VALUES ('80 hour work week', "All workmen have to work at least 80 hours a week.", 12.0, 50.0);
+INSERT INTO "Law" VALUES ('Minimum wage', "People make a minimum wage.", 70.0, 50.0);
 
 INSERT INTO "Imposes" VALUES ('France', 'Pesticide restriction K-58');
 INSERT INTO "Imposes" VALUES ('France', '80 hour work week');
