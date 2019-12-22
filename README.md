@@ -35,38 +35,77 @@ WHERE {
 }
 ```
 
+This query will give the total amount of sugar in Spaghetti Bolognese.
+
+```sql
+PREFIX ontology: <http://www.foodreport.be/ontology#>
+PREFIX data: <http://www.foodreport.be/data#>
+
+SELECT (SUM(?sugar) AS ?sugarSum)
+WHERE {
+  data:Spaghetti%20Bolognese ontology:needsIngredient ?ingredient .
+  ?ingredient ontology:sugar ?sugar
+}
+```
+
 This query will give all the steps of the recipe Spaghetti Bolognese in the correct order.
 
 ```sql
-PREFIX ontology: http://www.foodreport.be/ontology#
-PREFIX data: http://www.foodreport.be/data#
+PREFIX ontology: <http://www.foodreport.be/ontology#>
+PREFIX data: <http://www.foodreport.be/data#>
 
 SELECT ?step
 WHERE {
-  ?step ontology:describesRecipe data:Spaghetti%20Bolognese
+  ?step ontology:describesRecipe data:Tomato%20Soup
 } ORDER BY ASC(?step)
 ```
 
-This query will give the overall labour and environment score given from the country France and the ingredient tomato.
+This query will give the average labourScore and environmentScore for tomatoes produced in France.
 
 ```sql
-PREFIX ontology: http://www.foodreport.be/ontology#
-PREFIX data: http://www.foodreport.be/data#
+PREFIX ontology: <http://www.foodreport.be/ontology#>
+PREFIX data: <http://www.foodreport.be/data#>
 
-SELECT (AVG (?labourScore) AS ?averageLabourScore)
-       (AVG (?environmentScore) AS ?averageEnvironmentalScore)
-WHERE {
-  data:Tomato ontology:manufacturedFrom data:France .
-  data:France ontology:imposes ?law
-  OPTIONAL { data:80%20hour%20work%20week ontology:labourScore ?labourScore }
-  OPTIONAL { data:80%20hour%20work%20week ontology:environmentScore ?environmentScore }
-  {
-  data:Tomato ontology:hasFoodType ?foodtype .
-  ?law ontology:appliesToFoodType ?foodtype
-  }
-  UNION
-  {
-  ?law ontology:appliesToIngredient data:Tomato
-  }
+SELECT ?avgLabour ?avgEnv
+  WHERE {
+
+    {
+      SELECT (AVG(?labourScore) AS ?avgLabour)
+      WHERE {
+        data:Tomato ontology:manufacturedFrom data:France .
+        data:France ontology:imposes ?law .
+        ?law ontology:labourScore ?labourScore
+
+        # Law applies to foodtype of ingredient or to ingredient itself
+        { 
+          data:Tomato ontology:hasFoodType ?foodtype .
+          ?law ontology:appliesToFoodType ?foodtype 
+        }
+        UNION
+        { 
+          ?law ontology:appliesToIngredient data:Tomato
+        }
+      }
+    }
+
+    {
+      SELECT (AVG(?environmentScore) AS ?avgEnv)
+      WHERE {
+        data:Tomato ontology:manufacturedFrom data:France .
+        data:France ontology:imposes ?law .
+        ?law ontology:environmentScore ?environmentScore
+
+        # Law applies to foodtype of ingredient or to ingredient itself
+        { 
+          data:Tomato ontology:hasFoodType ?foodtype .
+          ?law ontology:appliesToFoodType ?foodtype 
+        }
+        UNION
+        { 
+          ?law ontology:appliesToIngredient data:Tomato
+        }
+      }
+    }
+
 }
 ```
