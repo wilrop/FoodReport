@@ -48,7 +48,7 @@ WHERE {
 }
 ```
 
-This query will give all the steps of the recipe Spaghetti Bolognese in the correct order.
+This query will give all the steps of the Tomato Soup recipe in the correct order.
 
 ```sql
 PREFIX ontology: <http://www.foodreport.be/ontology#>
