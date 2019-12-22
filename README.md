@@ -78,7 +78,7 @@ This query will give the average labourScore, environmentScore and trajectorySco
 PREFIX ontology: <http://www.foodreport.be/ontology#>
 PREFIX data: <http://www.foodreport.be/data#>
 
-SELECT ?country (AVG(?labourScore) AS ?averageLabourScore) (AVG(?environmentScore) AS ?averageEnvironmentScore) (MAX(?trajectoryScore) AS ?maxTrajectoryScore)
+SELECT ?country (AVG(?labourScore) AS ?averageLabourScore) (AVG(?environmentScore) AS ?averageEnvironmentScore) (AVG(?trajectoryScore) AS ?avgTrajectoryScore)
 WHERE {
   data:Tomato ontology:manufacturedFrom ?country .
   
