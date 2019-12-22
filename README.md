@@ -41,7 +41,7 @@ This query will give the total amount of sugar in Spaghetti Bolognese.
 PREFIX ontology: <http://www.foodreport.be/ontology#>
 PREFIX data: <http://www.foodreport.be/data#>
 
-SELECT (SUM(?sugar) AS ?sugarSum)
+SELECT (SUM(?sugar) AS ?totalSugar)
 WHERE {
   data:Spaghetti%20Bolognese ontology:needsIngredient ?ingredient .
   ?ingredient ontology:sugar ?sugar
@@ -60,52 +60,38 @@ WHERE {
 } ORDER BY ASC(?step)
 ```
 
-This query will give the average labourScore and environmentScore for tomatoes produced in France.
+This query will give all the ingredients of the Spaghetti Bolognese recipe in the correct order.
 
 ```sql
 PREFIX ontology: <http://www.foodreport.be/ontology#>
 PREFIX data: <http://www.foodreport.be/data#>
 
-SELECT ?avgLabour ?avgEnv
-  WHERE {
-
-    {
-      SELECT (AVG(?labourScore) AS ?avgLabour)
-      WHERE {
-        data:Tomato ontology:manufacturedFrom data:France .
-        data:France ontology:imposes ?law .
-        ?law ontology:labourScore ?labourScore
-
-        # Law applies to foodtype of ingredient or to ingredient itself
-        { 
-          data:Tomato ontology:hasFoodType ?foodtype .
-          ?law ontology:appliesToFoodType ?foodtype 
-        }
-        UNION
-        { 
-          ?law ontology:appliesToIngredient data:Tomato
-        }
-      }
-    }
-
-    {
-      SELECT (AVG(?environmentScore) AS ?avgEnv)
-      WHERE {
-        data:Tomato ontology:manufacturedFrom data:France .
-        data:France ontology:imposes ?law .
-        ?law ontology:environmentScore ?environmentScore
-
-        # Law applies to foodtype of ingredient or to ingredient itself
-        { 
-          data:Tomato ontology:hasFoodType ?foodtype .
-          ?law ontology:appliesToFoodType ?foodtype 
-        }
-        UNION
-        { 
-          ?law ontology:appliesToIngredient data:Tomato
-        }
-      }
-    }
-
+SELECT ?ingredient
+WHERE {
+  data:Spaghetti%20Bolognese ontology:needsIngredient ?ingredient
 }
+```
+
+This query will give the average labourScore, environmentScore and trajectoryScore for tomatoes produced in a specific country for a user located in Italy.
+
+```sql
+PREFIX ontology: <http://www.foodreport.be/ontology#>
+PREFIX data: <http://www.foodreport.be/data#>
+
+SELECT ?country (AVG(?labourScore) AS ?averageLabourScore) (AVG(?environmentScore) AS ?averageEnvironmentScore) (MAX(?trajectoryScore) AS ?maxTrajectoryScore)
+WHERE {
+  data:Tomato ontology:manufacturedFrom ?country .
+  
+  ?country ontology:imposes ?law .
+  ?law ontology:appliesToFoodType ?foodtype .
+  data:Tomato ontology:hasFoodType ?foodtype .
+  ?law ontology:labourScore ?labourScore .
+  ?law ontology:environmentScore ?environmentScore .
+  
+  ?trajectory ontology:trajectoryFrom ?country .
+  ?trajectory ontology:trajectoryTo data:Italy .
+  ?trajectory ontology:ships data:Tomato .
+  ?trajectory ontology:trajectoryScore ?trajectoryScore
+  
+} GROUP BY ?country
 ```
