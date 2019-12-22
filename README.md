@@ -26,8 +26,8 @@
 This query will give all the ingredients that come from France.
 
 ```sql
-PREFIX ontology: http://www.foodreport.be/ontology#
-PREFIX data: http://www.foodreport.be/data#
+PREFIX ontology: <http://www.foodreport.be/ontology#>
+PREFIX data: <http://www.foodreport.be/data#>
 
 SELECT ?ingredient
 WHERE {
