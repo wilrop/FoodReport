@@ -12,12 +12,29 @@
                 <http://www.foodreport.be/data#Pastas> ;
         <http://www.foodreport.be/ontology#ingredientName>
                 "Capellini" ;
+        <http://www.foodreport.be/ontology#manufacturedFrom>
+                <http://www.foodreport.be/data#France> ;
         <http://www.foodreport.be/ontology#proteins>
                 "12.5"^^<http://www.w3.org/2001/XMLSchema#double> ;
         <http://www.foodreport.be/ontology#sodium>
                 "0.0"^^<http://www.w3.org/2001/XMLSchema#double> ;
         <http://www.foodreport.be/ontology#sugar>
                 "1.8"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+<http://www.foodreport.be/data#trajectory4-France-Italy>
+        a       <http://www.foodreport.be/ontology#Trajectory> ;
+        <http://www.foodreport.be/ontology#distance>
+                "580.0"^^<http://www.w3.org/2001/XMLSchema#double> ;
+        <http://www.foodreport.be/ontology#ships>
+                <http://www.foodreport.be/data#Capellini> ;
+        <http://www.foodreport.be/ontology#trajectoryFrom>
+                <http://www.foodreport.be/data#France> ;
+        <http://www.foodreport.be/ontology#trajectoryName>
+                "trajectory4" ;
+        <http://www.foodreport.be/ontology#trajectoryScore>
+                "15.0"^^<http://www.w3.org/2001/XMLSchema#double> ;
+        <http://www.foodreport.be/ontology#trajectoryTo>
+                <http://www.foodreport.be/data#Italy> .
 
 <http://www.foodreport.be/data#80%20hour%20work%20week>
         a       <http://www.foodreport.be/ontology#Law> ;
@@ -57,7 +74,7 @@
         <http://www.foodreport.be/ontology#countryName>
                 "France" ;
         <http://www.foodreport.be/ontology#imposes>
-                <http://www.foodreport.be/data#Minimum%20wage> , <http://www.foodreport.be/data#Overfishing%20protection> , <http://www.foodreport.be/data#80%20hour%20work%20week> ;
+                <http://www.foodreport.be/data#Minimum%20wage> , <http://www.foodreport.be/data#Overfishing%20protection> , <http://www.foodreport.be/data#80%20hour%20work%20week> , <http://www.foodreport.be/data#Pesticide%20restriction%20K-58> ;
         <http://www.foodreport.be/ontology#isPartOf>
                 <http://www.foodreport.be/data#Europe> .
 
@@ -77,6 +94,8 @@
 
 <http://www.foodreport.be/data#Minimum%20wage>
         a       <http://www.foodreport.be/ontology#Law> ;
+        <http://www.foodreport.be/ontology#appliesToFoodType>
+                <http://www.foodreport.be/data#Fruits> , <http://www.foodreport.be/data#Oils> , <http://www.foodreport.be/data#Pastas> ;
         <http://www.foodreport.be/ontology#labourScore>
                 "70.0"^^<http://www.w3.org/2001/XMLSchema#double> ;
         <http://www.foodreport.be/ontology#lawName>
@@ -97,6 +116,21 @@
                 "Add 4 finely chopped bacon rashers and fry for 10 mins until golden and crisp." ;
         <http://www.foodreport.be/ontology#orderNumber>
                 "2"^^<http://www.w3.org/2001/XMLSchema#int> .
+
+<http://www.foodreport.be/data#trajectory3-Mexico-Italy>
+        a       <http://www.foodreport.be/ontology#Trajectory> ;
+        <http://www.foodreport.be/ontology#distance>
+                "300.0"^^<http://www.w3.org/2001/XMLSchema#double> ;
+        <http://www.foodreport.be/ontology#ships>
+                <http://www.foodreport.be/data#Olive%20Oil> ;
+        <http://www.foodreport.be/ontology#trajectoryFrom>
+                <http://www.foodreport.be/data#Mexico> ;
+        <http://www.foodreport.be/ontology#trajectoryName>
+                "trajectory3" ;
+        <http://www.foodreport.be/ontology#trajectoryScore>
+                "37.0"^^<http://www.w3.org/2001/XMLSchema#double> ;
+        <http://www.foodreport.be/ontology#trajectoryTo>
+                <http://www.foodreport.be/data#Italy> .
 
 <http://www.foodreport.be/data#Tomato%20Soup-3>
         a       <http://www.foodreport.be/ontology#Step> ;
@@ -247,7 +281,7 @@
         <http://www.foodreport.be/ontology#ingredientName>
                 "Olive Oil" ;
         <http://www.foodreport.be/ontology#manufacturedFrom>
-                <http://www.foodreport.be/data#Italy> ;
+                <http://www.foodreport.be/data#Italy> , <http://www.foodreport.be/data#Mexico> ;
         <http://www.foodreport.be/ontology#proteins>
                 "100.0"^^<http://www.w3.org/2001/XMLSchema#double> ;
         <http://www.foodreport.be/ontology#sodium>

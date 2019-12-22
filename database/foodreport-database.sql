@@ -148,12 +148,15 @@ INSERT INTO "Country" VALUES ('Mexico', 'North America');
 INSERT INTO "ManufacturedFrom" VALUES ('Tomato', 'Mexico');
 INSERT INTO "ManufacturedFrom" VALUES ('Tomato', 'France');
 INSERT INTO "ManufacturedFrom" VALUES ('Olive Oil', 'Italy');
+INSERT INTO "ManufacturedFrom" VALUES ('Olive Oil', 'Mexico');
+INSERT INTO "ManufacturedFrom" VALUES ('Capellini', 'France');
 
 INSERT INTO "Law" VALUES ('Pesticide restriction K-58', 'Pesticides with dangerous chemicals are not allowed.', NULL, 85.0);
 INSERT INTO "Law" VALUES ('Overfishing protection', 'There are restrictions on fishing.', NULL, 90.0);
 INSERT INTO "Law" VALUES ('80 hour work week', "All workmen have to work at least 80 hours a week.", 12.0, NULL);
 INSERT INTO "Law" VALUES ('Minimum wage', "People make a minimum wage.", 70.0, NULL);
 
+INSERT INTO "Imposes" VALUES ('France', 'Pesticide restriction K-58');
 INSERT INTO "Imposes" VALUES ('France', '80 hour work week');
 INSERT INTO "Imposes" VALUES ('France', 'Overfishing protection');
 INSERT INTO "Imposes" VALUES ('France', 'Minimum wage');
@@ -167,9 +170,14 @@ INSERT INTO "AppliesToFoodType" VALUES ('Pesticide restriction K-58', 'Fruits');
 INSERT INTO "AppliesToFoodType" VALUES ('80 hour work week', 'Fruits');
 INSERT INTO "AppliesToFoodType" VALUES ('80 hour work week', 'Oils');
 INSERT INTO "AppliesToFoodType" VALUES ('80 hour work week', 'Pastas');
+INSERT INTO "AppliesToFoodType" VALUES ('Minimum wage', 'Pastas');
+INSERT INTO "AppliesToFoodType" VALUES ('Minimum wage', 'Oils');
+INSERT INTO "AppliesToFoodType" VALUES ('Minimum wage', 'Fruits');
 
 INSERT INTO "Trajectory" VALUES ('trajectory18', 'France', 'Italy', 'Tomato', 580.0, 42.0);
 INSERT INTO "Trajectory" VALUES ('trajectory18', 'Mexico', 'Italy', 'Tomato', 1997.0, 30.0);
 INSERT INTO "Trajectory" VALUES ('trajectory83', 'France', 'Italy', 'Tomato', 555.0, 44.0);
 INSERT INTO "Trajectory" VALUES ('trajectory1', 'Italy', 'France', 'Capellini', 200.0, 10.0);
 INSERT INTO "Trajectory" VALUES ('trajectory2', 'Italy', 'Mexico', 'Capellini', 300.0, 5.0);
+INSERT INTO "Trajectory" VALUES ('trajectory3', 'Mexico', 'Italy', 'Olive Oil', 300.0, 37.0);
+INSERT INTO "Trajectory" VALUES ('trajectory4', 'France', 'Italy', 'Capellini', 580.0, 15.0);
